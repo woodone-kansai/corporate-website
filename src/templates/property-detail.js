@@ -2,7 +2,8 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-const BlogPost = ({ data }) => {
+
+const PropertyDetail = ({ data }) => {
   const { title, body, eyeCatchImage } = data.contentfulProperty;
   return (
     <Layout>
@@ -17,7 +18,8 @@ const BlogPost = ({ data }) => {
     </Layout>
   );
 };
-export default BlogPost;
+
+export default PropertyDetail;
 export const pageQuery = graphql`
   query($case: String!) {
     contentfulProperty(case: { eq: $case }) {

@@ -1,2 +1,8 @@
+import("./src/reset.css")
 import("./src/base.scss")
+import("./src/pages/index.scss")
+import("./src/components/header.scss")
+// import("./src/components/footer.scss")
 import("./src/components/layout.scss")
+import("./src/components/swiper.css")
+// import("swiper/swiper.scss")

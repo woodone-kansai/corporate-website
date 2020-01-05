@@ -1,15 +1,20 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+import logo from '../images/logo-header.jpg'
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <h1>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = () => (
+  <header id="header">
+    <div className="header-logo">
+      <Link to="/">
+        <img src={logo} alt="WOODONEKANSAI" />
+      </Link>
     </div>
+    <ul className="header-menu">
+      <li><Link to="/works">建築事例</Link></li>
+      <li><Link to="/recruit">リクルート</Link></li>
+      <li><Link to="/company">会社情報</Link></li>
+      <li><Link to="/contact">資料請求・お問い合わせ</Link></li>
+    </ul>
   </header>
 )
 
