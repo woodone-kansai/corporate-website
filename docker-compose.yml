@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  node_modules:
+    driver: local
+services:
+  app:
+    build: .
+    volumes:
+      - node_modules:/code/node_modules
+      - ./:/code
+    # env_file:
+      # - .env
+    ports:
+      - "8000:8000"
+    tty: true
+    stdin_open: true
+    command: ./node_modules/gatsby/node_modules/.bin/gatsby develop -H 0.0.0.0 -p 8000
