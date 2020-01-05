@@ -34,5 +34,6 @@ module.exports = {
         accessToken: `pYYnDL79qLeo5WBoaUCPmXF7BDCt8-vGQTUnY5b6VdA`
       }
     },
+    `gatsby-plugin-sass`,
   ],
 }
