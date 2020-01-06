@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
       <SEO title="ギャラリー" keywords={keywords} />
       <div className="gallery">
         <div className="heading-gallery-container">
-          <h2 className="heading-gallery en">Gallery</h2>
+          <h2 className="heading-gallery en">GALLERY</h2>
           <hr />
           <h2 className="heading-gallery ja">ギャラリー</h2>
         </div>

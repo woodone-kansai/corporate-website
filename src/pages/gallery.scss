@@ -2,13 +2,15 @@
   .heading-gallery-container {
     margin-top: 70px;
     margin-bottom: 20px;
+    hr {
+      margin: 15px 0;
+    }
     .heading-gallery {
       color: #3a3a3a;
       text-align: center;
       &.en {
         font-size: 30px;
         letter-spacing: 0.5em;
-        margin-bottom: 10px;
       }
       &.ja {
         font-size: 20px;
@@ -30,7 +32,11 @@
         padding: 10px;
         display: block;
         .category-text {
-          margin-left: 20px;
+          width: 80%;
+          padding: 20px;
+          margin-top: -30px;
+          background-color: white;
+          position: relative;
           .category-title {
             &.en {
               color: #000000;
