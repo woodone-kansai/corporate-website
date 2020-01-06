@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => {
           ))}
         </ul>
 
-        <Link to="/blogposts/">View all posts</Link>
+        <Link to="/gallery">建築実例をもっと見る</Link>
       </div>
     </Layout>
   )

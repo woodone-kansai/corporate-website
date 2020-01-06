@@ -20,9 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
       if (result.errors) {
         console.log("Error retrieving contentful data", result.errors)
       }
-      // Resolve the paths to our template
-      const propertyDetailTemplate = path.resolve("./src/templates/property-detail.js")
-      // Then for each result we create a page.
+      const propertyDetailTemplate = path.resolve("./src/components/property-detail.js")
       result.data.allContentfulProperty.edges.forEach(edge => {
         createPage({
           path: `/properties/${edge.node.case}/`,

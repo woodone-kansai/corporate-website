@@ -40,8 +40,6 @@ const IndexPage = ({ data }) => {
             </li>
           ))}
         </ul>
-
-        <Link to="/blogposts/">View all posts</Link>
       </div>
     </Layout>
   )
