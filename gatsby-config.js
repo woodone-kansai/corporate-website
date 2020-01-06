@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `My Awesome Blog`,
@@ -30,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `m25mh8u0aaa8`,
-        accessToken: `pYYnDL79qLeo5WBoaUCPmXF7BDCt8-vGQTUnY5b6VdA`
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       }
     },
     `gatsby-plugin-sass`,
