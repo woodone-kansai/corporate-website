@@ -10,7 +10,7 @@ const Header = () => (
       </Link>
     </div>
     <ul className="header-menu">
-      <li><Link to="/works">建築事例</Link></li>
+      <li><Link to="/gallery">建築事例</Link></li>
       <li><Link to="/recruit">リクルート</Link></li>
       <li><Link to="/company">会社情報</Link></li>
       <li><Link to="/contact">資料請求・お問い合わせ</Link></li>

@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="トップページ" keywords={[]} />
       <div className="home">
         <div className="top-image-slider">
           <Swiper options={{
