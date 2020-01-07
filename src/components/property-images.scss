@@ -1,0 +1,37 @@
+.property-images {
+  .heading-property-image-container {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    hr {
+      margin: 15px 0;
+    }
+    .heading-property-image {
+      color: #3a3a3a;
+      text-align: center;
+      &.en {
+        font-size: 30px;
+        letter-spacing: 0.5em;
+      }
+      &.ja {
+        font-size: 20px;
+      }
+    }
+  }
+  .description {
+    color: #3a3a3a;
+    margin: 70px auto;
+    max-width: 700px;
+    line-height: 1.5em;
+  }
+  .property-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    .property-image-item {
+      flex: 0 1 25%;
+      .property-image-inner {
+        padding: 5px;
+        display: block;
+      }
+    }
+  }
+}

@@ -29,7 +29,7 @@ class Swiper extends Component {
     const { topImages, thumbImages } = this.props
 
     return (
-      <div className="swiper">
+      <div className="swipe-thumbr">
         <div className="swiper-container gallery-top">
           <div className="swiper-wrapper">
             {
