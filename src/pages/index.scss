@@ -49,10 +49,13 @@
     display: flex;
     flex-wrap: wrap;
     .property-list-item {
-      flex: 0 1 50%;
+      width: 50%;
       .property-inner {
         padding: 10px;
         display: block;
+        .property-image {
+          width: 100%;
+        }
         .property-text {
           margin-left: 20px;
           .property-case {
@@ -66,6 +69,20 @@
           }
         }
       }
+    }
+  }
+
+  .gallery-link-container {
+    text-align: center;
+    margin: 40px 0;
+    .gallery-link {
+      display: inline-block;
+      padding: 15px 35px;
+      background-color: #404040;
+      text-align: center;
+      color: white;
+      font-size: 25px;
+      border-radius: 2px;
     }
   }
 }

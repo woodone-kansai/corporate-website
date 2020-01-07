@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
           {properties.map(({ node: property }) => (
             <li className="property-list-item" key={property.id}>
               <Link to={`/properties/${property.case}`} className="property-inner">
-                <Img fluid={property.eyeCatchImage.fluid} alt={property.title} />
+                <Img className="property-image" fluid={property.eyeCatchImage.fluid} alt={property.title} />
                 <div className="property-text">
                   <p className="property-case">{`CASE${property.case}`}</p>
                   <h3 className="property-title">{property.title}</h3>
@@ -70,7 +70,11 @@ const IndexPage = ({ data }) => {
           ))}
         </ul>
 
-        <Link to="/gallery">建築実例をもっと見る</Link>
+        <div className="gallery-link-container">
+          <Link className="gallery-link" to="/gallery">
+            建築実例をもっと見る >
+          </Link>
+        </div>
       </div>
     </Layout>
   )
