@@ -17,7 +17,7 @@ class PropertyDetail extends Component {
     this.setState({ activeImage: image })
   }
 
-  onClickClose = (image) => {
+  onClickClose = () => {
     this.setState({ activeImage: null })
   }
 
