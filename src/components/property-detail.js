@@ -27,7 +27,7 @@ const PropertyDetail = ({ data }) => {
 
         <SwiperThumb
           topImages={propertyImages.map(p => p.originalImage)}
-          thumbImages={propertyImages.map(p => p.squareImage)}
+          thumbImages={propertyImages.map(p => p.squareImage || p.originalImage)}
         />
 
         <div className="description">
@@ -36,7 +36,7 @@ const PropertyDetail = ({ data }) => {
           <ul className="property-tags">
             {
               tag.map(t => (
-                <li className="property-tag">{t}</li>
+                <li key={t} className="property-tag">{t}</li>
               ))
             }
           </ul>

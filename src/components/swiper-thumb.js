@@ -7,7 +7,7 @@ class Swiper extends Component {
     
     const galleryThumbs = new SwiperLib('.gallery-thumbs', {
       spaceBetween: 10,
-      slidesPerView: 4,
+      slidesPerView: 6,
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
@@ -29,12 +29,12 @@ class Swiper extends Component {
     const { topImages, thumbImages } = this.props
 
     return (
-      <div className="swipe-thumbr">
+      <div className="swipe-thumb">
         <div className="swiper-container gallery-top">
           <div className="swiper-wrapper">
             {
               topImages.map(ti => (
-                <img className="swiper-slide" key={`${ti.id}-topImage`} src={ti.file.url} alt={ti.id} />
+                <div className="swiper-slide" key={`${ti.id}-topImage`} style={{ backgroundImage: `url(${ti.file.url})` }} />
               ))
             }
           </div>
@@ -45,7 +45,9 @@ class Swiper extends Component {
           <div className="swiper-wrapper">
             {
               thumbImages.map(ti => (
-                <img className="swiper-slide" key={`${ti.id}-topImage`} src={ti.file.url} alt={ti.id} />
+                <div className="swiper-slide" key={`${ti.id}-thumbImage`}>
+                  <div style={{ backgroundImage: `url(${ti.file.url})` }} />
+                </div>
               ))
             }
           </div>
