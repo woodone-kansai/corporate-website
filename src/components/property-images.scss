@@ -28,9 +28,62 @@
     flex-wrap: wrap;
     .property-image-item {
       flex: 0 1 25%;
+      cursor: pointer;
       .property-image-inner {
         padding: 5px;
         display: block;
+      }
+    }
+  }
+  .gallery-modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .gallery-modal {
+      width: 70%;
+      height: 70%;
+      background-color: white;
+      display: flex;
+      position: relative;
+      .closeButton {
+        position: absolute;
+        top: 15px;
+        right: 6px;
+        width: 24px;
+        height: 24px;
+        &::after, &::before {
+          content: '';
+          background-color: #000000;
+          height: 24px;
+          width: 1px;
+          position: absolute;
+          top: -1px;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+        &::hover {
+         cursor: pointer;
+        }
+      }
+      .activeImage {
+        display: inline-block;
+        height: 80%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 80%;
+        margin: auto;
       }
     }
   }

@@ -13,6 +13,7 @@ import slide4 from '../images/slide-4.jpg'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
+  console.log(properties)
 
   return (
     <Layout>
@@ -89,9 +90,6 @@ export const query = graphql`
           id
           case
           title
-          body {
-            body
-          }
           eyeCatchImage {
             fluid(maxWidth: 1280) {
               ...GatsbyContentfulFluid

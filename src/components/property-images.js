@@ -1,43 +1,75 @@
-import React from "react"
+import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Img from 'gatsby-image'
 import Layout from "./layout"
 import SEO from "./seo"
 
-const PropertyDetail = ({ data }) => {
-  const {
-    nameEn,
-    nameJa,
-    body,
-  } = data.contentfulPropertyImageCategory
-  const propertyImages = data.allContentfulPropertyImage.edges
+class PropertyDetail extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <Layout>
-      <SEO title={nameJa} />
-      <div className="property-images">
-        <div className="heading-property-image-container">
-          <h2 className="heading-property-image en">{nameEn.toUpperCase()}</h2>
-          <hr />
-          <h2 className="heading-property-image ja">{nameJa}</h2>
-        </div>
+    this.state = {
+      activeImage: null
+    }
+  }
 
-        <div className="description">
-          {body.body}
-        </div>
+  onClickImage = (image) => {
+    this.setState({ activeImage: image })
+  }
 
-        <ul className="property-image-container">
-          {propertyImages.map(({ node: pImage }) => (
-            <li className="property-image-item" key={pImage.id}>
-              <div className="property-image-inner">
-                <Img fluid={pImage.squareImage.fluid} />
+  onClickClose = (image) => {
+    this.setState({ activeImage: null })
+  }
+
+  render () {
+    const { activeImage } = this.state
+    const { data: { allContentfulPropertyImage, contentfulPropertyImageCategory } } = this.props
+
+    const propertyImages = allContentfulPropertyImage.edges
+    const {
+      nameEn,
+      nameJa,
+      body,
+    } = contentfulPropertyImageCategory
+
+    return (
+      <Layout>
+        <SEO title={nameJa} />
+        <div className="property-images">
+          <div className="heading-property-image-container">
+            <h2 className="heading-property-image en">{nameEn.toUpperCase()}</h2>
+            <hr />
+            <h2 className="heading-property-image ja">{nameJa}</h2>
+          </div>
+
+          <div className="description">
+            {body.body}
+          </div>
+
+          <ul className="property-image-container">
+            {propertyImages.map(({ node: pImage }) => (
+              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(pImage.originalImage.file.url)}>
+                <div className="property-image-inner">
+                  <Img fluid={pImage.squareImage.fluid} />
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {
+            activeImage ? (
+              <div className="gallery-modal-container">
+                <div className="gallery-modal">
+                  <div className="closeButton" onClick={this.onClickClose} />
+                  <div className="activeImage" style={{ backgroundImage: `url(${activeImage})` }} />
+                </div>
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Layout>
-  )
+            ) : null
+          }
+        </div>
+      </Layout>
+    )
+  }
 }
 
 export default PropertyDetail
@@ -50,15 +82,14 @@ export const pageQuery = graphql`
         body
       }
     }
-    allContentfulPropertyImage(filter: {category: {elemMatch: {nameEn: {eq: $nameEn}}}}) {
+    allContentfulPropertyImage(sort: {fields: name}, filter: {category: {elemMatch: {nameEn: {eq: $nameEn}}}}) {
       edges {
         node {
           id
           name
           originalImage {
-            id
-            fluid(maxWidth: 1280) {
-              ...GatsbyContentfulFluid
+            file {
+              url
             }
           }
           squareImage {

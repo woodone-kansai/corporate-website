@@ -8,7 +8,6 @@ const PropertyDetail = ({ data }) => {
   const {
     title,
     propertyImages,
-    body,
     location,
     siteArea,
     totalFloorArea,
@@ -31,7 +30,13 @@ const PropertyDetail = ({ data }) => {
         />
 
         <div className="description">
-          <p className="property-body">{body.body}</p>
+          <p className="property-body">
+            ウッドワン関西で叶えた理想の住まいを集めました。
+            <br />
+            外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
+            <br />
+            あなたのお気に入りを見つけてください。
+          </p>
 
           <ul className="property-tags">
             {
@@ -72,9 +77,6 @@ export const pageQuery = graphql`
             url
           }
         }
-      }
-      body {
-        body
       }
       location
       siteArea
