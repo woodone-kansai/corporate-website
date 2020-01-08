@@ -6,14 +6,9 @@ import Swiper from '../components/swiper';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import slide1 from '../images/slide-1.jpg'
-import slide2 from '../images/slide-2.jpg'
-import slide3 from '../images/slide-3.jpg'
-import slide4 from '../images/slide-4.jpg'
-
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
-  console.log(properties)
+  const slides = data.allContentfulAsset.edges
 
   return (
     <Layout>
@@ -27,10 +22,11 @@ const IndexPage = ({ data }) => {
             speed: 1000,
             loop: true,
           }}>
-            <img className="swiper-slide" src={slide1} alt="slide1" />
-            <img className="swiper-slide" src={slide2} alt="slide2" />
-            <img className="swiper-slide" src={slide3} alt="slide3" />
-            <img className="swiper-slide" src={slide4} alt="slide4" />
+            {
+              slides.map((s, i) => (
+                <img className="swiper-slide" src={s.node.file.url} alt={`slide-${i}`} key={s.node.id} />
+              ))
+            }
           </Swiper>
 
           <div className="top-image-inner">
@@ -97,6 +93,16 @@ export const query = graphql`
             file {
               url
             }
+          }
+        }
+      }
+    }
+    allContentfulAsset(filter: {title: {regex: "/^top-slide-/"}}, sort: {fields: title}) {
+      edges {
+        node {
+          id
+          file {
+            url
           }
         }
       }

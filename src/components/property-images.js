@@ -94,7 +94,7 @@ export const pageQuery = graphql`
           }
           squareImage {
             id
-            fluid(maxWidth: 1280) {
+            fluid(maxWidth: 150) {
               ...GatsbyContentfulFluid
             }
           }
