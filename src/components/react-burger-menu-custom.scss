@@ -3,8 +3,10 @@
     top: 30px;
     right: 20px;
     left: unset;
+    width: 30px;
+    height: 24px;
     span {
-      height: 5%!important;
+      height: 8%!important;
     }
     @media (min-width: 769px) {
       display: none!important;

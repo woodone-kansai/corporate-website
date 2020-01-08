@@ -1,7 +1,9 @@
 .property-images {
   .heading-property-image-container {
     margin-top: 70px;
-    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin-top: 27px;
+    }
     hr {
       margin: 15px 0;
     }
@@ -22,6 +24,10 @@
     margin: 70px auto;
     max-width: 700px;
     line-height: 1.5em;
+    @media (max-width: 768px) {
+      margin: 30px auto;
+      padding: 0 10px;
+    }
   }
   .property-image-container {
     display: flex;
@@ -32,6 +38,9 @@
       .property-image-inner {
         padding: 5px;
         display: block;
+        @media (max-width: 768px) {
+          padding: 1px;
+        }
       }
     }
   }

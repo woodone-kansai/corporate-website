@@ -54,6 +54,7 @@
     flex-wrap: wrap;
     .property-list-item {
       width: 50%;
+      margin-bottom: 20px;
       .property-inner {
         padding: 10px;
         display: block;
@@ -92,7 +93,7 @@
 
   .gallery-link-container {
     text-align: center;
-    margin: 40px 0;
+    margin: 40px 0 30px;
     .gallery-link {
       display: inline-block;
       padding: 15px 35px;
