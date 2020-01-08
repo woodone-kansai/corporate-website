@@ -33,6 +33,10 @@
     max-width: 700px;
     line-height: 1.5em;
     font-size: 17px;
+    @media (max-width: 768px) {
+      margin: 30px auto;
+      padding: 0 10px;
+    }
   }
   .heading-works-container {
     margin-bottom: 20px;
