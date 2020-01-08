@@ -1,5 +1,5 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 import logo from '../images/logo-header.jpg'
 
 const Header = () => (
@@ -9,7 +9,7 @@ const Header = () => (
         <img src={logo} alt="WOODONEKANSAI" />
       </Link>
     </div>
-    <ul className="header-menu">
+    <ul className="header-menu pc">
       <li><Link to="/gallery">建築事例</Link></li>
       <li><Link to="/recruit">リクルート</Link></li>
       <li><Link to="/company">会社情報</Link></li>
