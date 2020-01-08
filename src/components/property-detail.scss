@@ -29,13 +29,16 @@
     }
     .property-tags {
       display: flex;
-      margin: 20px 0;
+      flex-wrap: wrap;
+      margin: 10px 0;
       .property-tag {
         padding: 10px 15px;
         background-color: #777777;
-        margin-right: 10px;
+        margin: 5px 10px 5px 0;
         color: #ffffff;
         border-radius: 2px;
+        word-break: keep-all;
+        font-size: 15px;
       }
     }
     .property-spec {

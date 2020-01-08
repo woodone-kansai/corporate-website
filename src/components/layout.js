@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
         <MobileMenu />
         <div id="content">
           <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
+          <main id="main">{children}</main>
           <Footer />
         </div>
       </div>
