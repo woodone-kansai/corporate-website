@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="トップページ" keywords={[]} />
+      <SEO title="トップページ"/>
       <div className="home">
         <div className="top-image-slider">
           <Swiper options={{
@@ -91,7 +91,7 @@ export const query = graphql`
           case
           title
           eyeCatchImage {
-            fluid(maxWidth: 1280) {
+            fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
             }
             file {

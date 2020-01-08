@@ -13,10 +13,14 @@ const PropertyDetail = ({ data }) => {
     totalFloorArea,
     tag
   } = data.contentfulProperty;
+  const description = `ウッドワン関西で叶えた理想の住まいを集めました。
+    外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
+    あなたのお気に入りを見つけてください。
+  `
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description} />
       <div className="property-detail">
         <div className="heading-property-container">
           <h2 className="heading-property">{title}</h2>
@@ -31,11 +35,7 @@ const PropertyDetail = ({ data }) => {
 
         <div className="description">
           <p className="property-body">
-            ウッドワン関西で叶えた理想の住まいを集めました。
-            <br />
-            外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
-            <br />
-            あなたのお気に入りを見つけてください。
+            {description}
           </p>
 
           <ul className="property-tags">

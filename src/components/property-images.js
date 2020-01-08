@@ -34,7 +34,7 @@ class PropertyDetail extends Component {
 
     return (
       <Layout>
-        <SEO title={nameJa} />
+        <SEO title={nameJa} description={body.body} />
         <div className="property-images">
           <div className="heading-property-image-container">
             <h2 className="heading-property-image en">{nameEn.toUpperCase()}</h2>

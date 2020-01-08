@@ -1,9 +1,9 @@
 .property-images {
+  margin-top: 70px;
+  @media (max-width: 768px) {
+    margin-top: 27px;
+  }
   .heading-property-image-container {
-    margin-top: 70px;
-    @media (max-width: 768px) {
-      margin-top: 27px;
-    }
     hr {
       margin: 15px 0;
     }

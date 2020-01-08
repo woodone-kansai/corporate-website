@@ -1,6 +1,9 @@
 .property-detail {
+  margin-top: 70px;
+  @media (max-width: 768px) {
+    margin-top: 27px;
+  }
   .heading-property-container {
-    margin-top: 70px;
     margin-bottom: 20px;
     hr {
       margin: 15px 0;
@@ -34,6 +37,7 @@
       color: #3a3a3a;
       line-height: 1.5em;
       font-size: 17px;
+      white-space: pre-line;
     }
     .property-tags {
       display: flex;

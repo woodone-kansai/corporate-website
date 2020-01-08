@@ -4,9 +4,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `My Awesome Blog`,
-    description: `An awesome blog displaying my awesome posts.`,
-    author: `Masa`,
+    title: `ウッドワン関西`,
+    description: `ウッドワン関西は、阪神間でオーナー様のご自宅を施工してまいりました。これからも皆さまの生活に寄り添った快適な間取り、性能、デザインを追求してまいります。`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

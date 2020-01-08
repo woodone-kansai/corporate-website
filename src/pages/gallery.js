@@ -7,11 +7,14 @@ import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
   const categories = data.allContentfulPropertyImageCategory.edges
-  const keywords = categories.map(c => c.node.nameJa)
+  const description = `ウッドワン関西で叶えた理想の住まいを集めました。
+    外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
+    あなたのお気に入りを見つけてください。
+  `
 
   return (
     <Layout>
-      <SEO title="ギャラリー" keywords={keywords} />
+      <SEO title="ギャラリー" description={description} />
       <div className="gallery">
         <div className="heading-gallery-container">
           <h2 className="heading-gallery en">GALLERY</h2>
@@ -20,11 +23,7 @@ const IndexPage = ({ data }) => {
         </div>
 
         <p className="description">
-          ウッドワン関西で叶えた理想の住まいを集めました。
-          <br />
-          外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
-          <br />
-          あなたのお気に入りを見つけてください。
+          {description}
         </p>
 
         <ul className="category-list">
@@ -55,7 +54,7 @@ export const query = graphql`
           nameEn
           nameJa
           image {
-            fluid(maxWidth: 1280) {
+            fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
             }
           }
