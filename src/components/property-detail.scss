@@ -22,6 +22,9 @@
     border-bottom: 1px solid #3a3a3a;
     padding: 20px;
     margin: 50px 0 70px;
+    @media (max-width: 768px) {
+      padding: 15px 5px;
+    }
     .property-body {
       color: #3a3a3a;
       line-height: 1.5em;

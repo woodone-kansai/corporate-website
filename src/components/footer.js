@@ -9,7 +9,7 @@ const Footer = () => (
         <li><Link to="/gallery">建築事例</Link></li>
         <li><Link to="/recruit">リクルート</Link></li>
         <li><Link to="/company">会社情報</Link></li>
-        <li><Link to="/contact">資料請求・お問い合わせ</Link></li>
+        <li><Link to="/contact">お問い合わせ</Link></li>
       </ul>
       <div className="tel-container">
         <p className="text">お気軽にご連絡ください</p>

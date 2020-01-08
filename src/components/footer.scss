@@ -7,7 +7,17 @@
       margin-bottom: 30px;
       li {
         display: inline;
-        margin: 0 20px;
+        padding: 0 20px;
+        @media (max-width: 768px) {
+          display: initial;
+          font-size: 10px;
+          padding: 0 14px;
+          font-size: 10px;
+          border-right: 1px solid white;
+          &:last-child {
+            border: none;
+          }
+        }
         a {
           color: white;
         }
