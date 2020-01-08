@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import MobileMenu from './mobile-menu'
+import SlideMenu from './slide-menu'
 import Header from "./header"
 import Footer from "./footer"
 
@@ -20,12 +20,12 @@ const Layout = ({ children }) => {
   return (
     <Fragment>
       <div id="outer-container">
-        <MobileMenu />
+        <SlideMenu />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <div id="content">
-          <Header siteTitle={data.site.siteMetadata.title} />
           <main id="main">{children}</main>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </Fragment>
   )
