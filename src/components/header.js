@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, Link } from 'gatsby'
-// import logo from '../images/logo-header.jpg'
 
 const Header = () => {
   const data = useStaticQuery(graphql`
