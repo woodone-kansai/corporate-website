@@ -1,6 +1,7 @@
 import("./src/reset.css")
 import("./src/base.scss")
 import("./src/pages/index.scss")
+import("./src/pages/about.scss")
 import("./src/pages/gallery.scss")
 import("./src/components/property-images.scss")
 import("./src/components/property-detail.scss")
