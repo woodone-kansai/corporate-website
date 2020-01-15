@@ -3,7 +3,6 @@
     &.gallery-top {
       height: 400px;
       width: 100%;
-      background-color: #000000;
       .swiper-slide {
         background-size: contain;
         background-position: center;
@@ -25,6 +24,11 @@
           background-repeat: no-repeat;
         }
       }
+    }
+  }
+  .swipe-wrapper {
+    .swiper-button {
+      color: #636363;
     }
   }
 }
