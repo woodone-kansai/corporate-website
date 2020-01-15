@@ -56,7 +56,7 @@ const RecruitPage = ({ data }) => {
           </tr>
           <tr>
             <th></th>
-            <td>※法人営業C9</td>
+            <td>※法人営業</td>
             <td>土曜・日曜</td>
           </tr>
           <tr>
@@ -73,13 +73,11 @@ const RecruitPage = ({ data }) => {
           </tr>
           <tr>
             <th>お問合せ</th>
-            <td>株式会社ウッドワン関西</td>
-            <td></td>
+            <td colspan="2">株式会社ウッドワン関西</td>
           </tr>
           <tr>
             <th></th>
-            <td>info@woodone-kansai.net</td>
-            <td></td>
+            <td colspan="2">info@woodone-kansai.net</td>
           </tr>
         </table>
       </div>

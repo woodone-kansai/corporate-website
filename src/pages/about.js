@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const AboutPage = ({ data }) => {
+const AboutPage = () => {
   const { site } = useStaticQuery(
     graphql`
       query {
