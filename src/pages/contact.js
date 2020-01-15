@@ -41,7 +41,7 @@ const ContactPage = ({ data }) => {
 
           <p className="form-item">
             <label>ご計画内容</label>
-            <select name="plan[]">
+            <select name="ご計画内容">
               <option value="新築">新築</option>
               <option value="建替">建替</option>
               <option value="リフォーム">リフォーム</option>
@@ -51,7 +51,7 @@ const ContactPage = ({ data }) => {
 
           <p className="form-item">
             <label>土地について</label>
-            <select name="land[]">
+            <select name="土地について">
               <option value="所有している">所有している</option>
               <option value="契約予定">契約予定</option>
               <option value="検討">検討</option>
@@ -60,12 +60,12 @@ const ContactPage = ({ data }) => {
 
           <p className="form-item">
             <label>建築予定エリア</label>
-            <input type="text" name="area" placeholder="例：兵庫県宝塚市"/>
+            <input name="建築予定エリア" type="text" placeholder="例：兵庫県宝塚市"/>
           </p>
 
           <p className="form-item">
             <label>建築予定時期</label>
-            <select name="schedule[]">
+            <select name="建築予定時期">
               <option value="現在計画中">現在計画中</option>
               <option value="半年以内">半年以内</option>
               <option value="１年以内">１年以内</option>
@@ -76,12 +76,12 @@ const ContactPage = ({ data }) => {
 
           <p className="form-item">
             <label>建築予算</label>
-            <input type="text" name="budget" placeholder="例：〇〇万円くらい"/>
+            <input type="text" name="建築予算" placeholder="例：〇〇万円くらい"/>
           </p>
 
           <p className="form-item">
             <label>お問い合わせ内容</label>
-            <select name="inquiry[]">
+            <select name="お問い合わせ内容">
               <option value="カタログ請求">カタログ請求</option>
               <option value="間取りや費用について相談したい">間取りや費用について相談したい</option>
               <option value="直接会って相談したい">直接会って相談したい</option>
@@ -90,37 +90,37 @@ const ContactPage = ({ data }) => {
 
           <p className="form-item">
             <label>ご質問等</label>
-            <textarea name="question" placeholder="ご質問等があればご記載ください。"></textarea>
+            <textarea name="ご質問等" placeholder="ご質問等があればご記載ください。"></textarea>
           </p>
 
           <p className="form-item">
-            <label className="required" >お名前</label>
-            <input required type="text" name="name"/>
+            <label className="required">お名前</label>
+            <input required type="text" name="お名前"/>
           </p>
 
           <p className="form-item">
-            <label className="required" >フリガナ</label>
-            <input required type="text" name="kana"/>
+            <label className="required">フリガナ</label>
+            <input required type="text" name="フリガナ"/>
           </p>
 
           <p className="form-item">
-            <label className="required" >メールアドレス</label>
-            <input required type="email" name="email"/>
+            <label className="required">メールアドレス</label>
+            <input required type="email" name="メールアドレス"/>
           </p>
 
           <p className="form-item">
-            <label className="required" >ご住所</label>
-            <input required type="text" name="address"/>
+            <label className="required">ご住所</label>
+            <input required type="text" name="ご住所"/>
           </p>
 
           <p className="form-item">
-            <label className="required" >電話番号</label>
-            <input required type="tel" name="tel"/>
+            <label className="required">電話番号</label>
+            <input required type="tel" name="電話番号"/>
           </p>
 
           <p className="form-item">
             <label>電話連絡可能時間帯</label>
-            <input type="text" name="availabi-time" placeholder="※ご都合のよい時間帯をご記入ください。"/>
+            <input type="text" name="電話連絡可能時間帯" placeholder="※ご都合のよい時間帯をご記入ください。"/>
           </p>
 
           <button className="submit-button" type="submit">送信</button>
