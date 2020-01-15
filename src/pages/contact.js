@@ -80,7 +80,7 @@ const ContactPage = ({ data }) => {
           </p>
 
           <p className="form-item">
-            <label>お問い合わせ内容</label>
+            <label>お問合内容</label>
             <select name="お問い合わせ内容">
               <option value="カタログ請求">カタログ請求</option>
               <option value="間取りや費用について相談したい">間取りや費用について相談したい</option>

@@ -30,6 +30,9 @@
         flex-basis: 40%;
         margin-right: 10px;
         font-size: 15px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
         &.required {
           &::before {
             content: '*';
@@ -40,7 +43,16 @@
       }
       input, select, textarea {
         font-size: 15px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
         flex-basis: 60%;
+        border: 1px solid grey;
+        padding: 5px;
+        background-color: white;
+      }
+      textarea {
+        height: 45px;
       }
     }
     .submit-button {
