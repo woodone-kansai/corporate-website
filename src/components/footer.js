@@ -24,7 +24,7 @@ const Footer = () => {
         </ul>
         <div className="tel-container">
           <p className="text">お気軽にご連絡ください</p>
-          <p className="tel">0732-84-5732</p>
+          <p className="tel">0797-84-5732</p>
         </div>
       </div>
 
