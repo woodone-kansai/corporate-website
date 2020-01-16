@@ -49,7 +49,7 @@ const RecruitPage = ({ data }) => {
             <td>
               ※設計<br />(コーディネーター含)
             </td>
-            <td>火曜日・水曜日</td>
+            <td>火曜・水曜</td>
           </tr>
           <tr>
             <th></th>
