@@ -6,6 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `ウッドワン関西`,
     description: `ウッドワン関西は、阪神間でオーナー様のご自宅を施工してまいりました。これからも皆さまの生活に寄り添った快適な間取り、性能、デザインを追求してまいります。`,
+    siteUrl: `https://woodonekansai.jp`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -44,5 +45,6 @@ module.exports = {
         trackingId: `UA-155715498-1`,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
