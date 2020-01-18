@@ -32,11 +32,11 @@ const IndexPage = ({ data }) => {
           <div className="top-image-inner">
             <div className="top-text">
               <div className="top-text-left">
-                <span>理想の住まいを叶える。</span>
+                <h1>理想の住まいを叶える。</h1>
               </div>
               <br />
               <div className="top-text-right">
-                <span>ウッドワン関西。</span>
+                <h1>ウッドワン関西。</h1>
               </div>
             </div>
           </div>
