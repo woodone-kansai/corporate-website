@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
 import Layout from "./layout"
 import SEO from "./seo"
@@ -9,12 +9,16 @@ class PropertyDetail extends Component {
     super(props)
 
     this.state = {
-      activeImage: null
+      activeImage: null,
+      activeCase: null,
     }
   }
 
-  onClickImage = (image) => {
-    this.setState({ activeImage: image })
+  onClickImage = (propertyImage) => {
+    this.setState({
+      activeImage: propertyImage.originalImage.file.url,
+      activeCase: propertyImage.property ? propertyImage.property[0].case : null,
+    })
   }
 
   onClickClose = () => {
@@ -22,7 +26,7 @@ class PropertyDetail extends Component {
   }
 
   render () {
-    const { activeImage } = this.state
+    const { activeImage, activeCase } = this.state
     const { data: { allContentfulPropertyImage, contentfulPropertyImageCategory } } = this.props
 
     const propertyImages = allContentfulPropertyImage.edges
@@ -48,7 +52,7 @@ class PropertyDetail extends Component {
 
           <ul className="property-image-container">
             {propertyImages.map(({ node: pImage }) => (
-              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(pImage.originalImage.file.url)}>
+              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(pImage)}>
                 <div className="property-image-inner">
                   <Img fluid={pImage.squareImage.fluid} />
                 </div>
@@ -60,8 +64,17 @@ class PropertyDetail extends Component {
             activeImage ? (
               <div className="gallery-modal-container">
                 <div className="gallery-modal">
-                  <div className="closeButton" onClick={this.onClickClose} />
-                  <div className="activeImage" style={{ backgroundImage: `url(${activeImage})` }} />
+                  <div className="close-button" onClick={this.onClickClose} />
+
+                  <div className="active-image" style={{ backgroundImage: `url(${activeImage})` }} />
+
+                  {
+                    activeCase ? (
+                      <Link className="property-link" to={`/properties/${activeCase}`}>
+                        この写真の建築事例をもっと見る
+                      </Link>
+                    ) : null
+                  }
                 </div>
               </div>
             ) : null
@@ -86,17 +99,18 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          name
           originalImage {
             file {
               url
             }
           }
           squareImage {
-            id
             fluid(maxWidth: 150) {
               ...GatsbyContentfulFluid
             }
+          }
+          property {
+            case
           }
         }
       }

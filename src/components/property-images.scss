@@ -58,21 +58,26 @@
     .gallery-modal {
       width: 70%;
       height: 70%;
-      background-color: white;
-      display: flex;
+      padding: 30px;
+      background-color: #ffffff;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       @media (max-width: 992px) {
         height: 45%;
       }
       @media (max-width: 768px) {
         width: 90%;
       }
-      .closeButton {
+      .close-button {
+        cursor: pointer;
         position: absolute;
         top: 15px;
-        right: 6px;
+        right: 15px;
         width: 24px;
         height: 24px;
+        text-align: center;
         &::after, &::before {
           content: '';
           background-color: #000000;
@@ -91,14 +96,27 @@
          cursor: pointer;
         }
       }
-      .activeImage {
+      .active-image {
         display: inline-block;
         height: 80%;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         width: 80%;
-        margin: auto;
+        margin: 0 auto;
+      }
+      .property-link {
+        display: inline-block;
+        padding: 15px 35px;
+        background-color: #404040;
+        text-align: center;
+        color: #ffffff;
+        font-size: 25px;
+        border-radius: 2px;
+        margin: 30px auto 0;
+        @media (max-width: 768px) {
+          font-size: 15px;
+        }
       }
     }
   }
