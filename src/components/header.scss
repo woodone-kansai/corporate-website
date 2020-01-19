@@ -6,6 +6,12 @@ header#header {
   align-items: center;
   margin: 0 auto;
   padding: 0 10px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
   .header-logo {
     width: 270px;
     @media (max-width: 992px) {
