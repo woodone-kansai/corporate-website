@@ -3,8 +3,6 @@ import SwiperLib from 'swiper'
 
 class Swiper extends Component {
   componentDidMount() {
-    const { showButton = false } = this.props
-    
     const galleryThumbs = new SwiperLib('.gallery-thumbs', {
       spaceBetween: 10,
       slidesPerView: 6,
@@ -22,14 +20,13 @@ class Swiper extends Component {
         swiper: galleryThumbs
       }
     });
-    this.showButton = showButton
   }
 
   render() {
     const { topImages, thumbImages } = this.props
 
     return (
-      <div className="swipe-thumb">
+      <div className="swiper-thumb">
         <div className="swiper-container gallery-top">
           <div className="swiper-wrapper">
             {

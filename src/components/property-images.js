@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { graphql, Link } from "gatsby"
 import Img from 'gatsby-image'
+import SwiperModal from './swiper-modal'
 import Layout from "./layout"
 import SEO from "./seo"
 
@@ -9,24 +10,34 @@ class PropertyDetail extends Component {
     super(props)
 
     this.state = {
-      activeImage: null,
+      activeIndex: null,
       activeCase: null,
     }
   }
 
-  onClickImage = (propertyImage) => {
+  onClickImage = (index, propertyImage) => {
     this.setState({
-      activeImage: propertyImage.originalImage.file.url,
+      activeIndex: index,
       activeCase: propertyImage.property ? propertyImage.property[0].case : null,
     })
   }
 
   onClickClose = () => {
-    this.setState({ activeImage: null })
+    this.setState({
+      activeIndex: null,
+      activeCase: null,
+    })
+  }
+
+  onSlideChange = (activeIndex) => {
+    const { data: { allContentfulPropertyImage } } = this.props
+    const propertyImages = allContentfulPropertyImage.edges
+    const property = propertyImages[activeIndex].node.property
+    this.setState({ activeCase: property ? property[0].case : null })
   }
 
   render () {
-    const { activeImage, activeCase } = this.state
+    const { activeIndex, activeCase } = this.state
     const { data: { allContentfulPropertyImage, contentfulPropertyImageCategory } } = this.props
 
     const propertyImages = allContentfulPropertyImage.edges
@@ -51,8 +62,8 @@ class PropertyDetail extends Component {
           </div>
 
           <ul className="property-image-container">
-            {propertyImages.map(({ node: pImage }) => (
-              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(pImage)}>
+            {propertyImages.map(({ node: pImage }, index) => (
+              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(index, pImage)}>
                 <div className="property-image-inner">
                   <Img fluid={pImage.squareImage.fluid} />
                 </div>
@@ -61,12 +72,16 @@ class PropertyDetail extends Component {
           </ul>
 
           {
-            activeImage ? (
+            activeIndex ? (
               <div className="gallery-modal-container">
                 <div className="gallery-modal">
                   <div className="close-button" onClick={this.onClickClose} />
 
-                  <div className="active-image" style={{ backgroundImage: `url(${activeImage})` }} />
+                  <SwiperModal
+                    images={propertyImages.map(pi => pi.node.originalImage)}
+                    index={activeIndex}
+                    onSlideChange={this.onSlideChange}
+                  />
 
                   {
                     activeCase ? (
@@ -100,6 +115,7 @@ export const pageQuery = graphql`
         node {
           id
           originalImage {
+            id
             file {
               url
             }
