@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
       const propertyImageComponent = path.resolve("./src/components/property-images.js")
       result.data.allContentfulPropertyImageCategory.edges.forEach(edge => {
         createPage({
-          path: `/property-images/${edge.node.nameEn}`,
+          path: `/property-images/${edge.node.nameEn}/`,
           component: slash(propertyImageComponent),
           context: {
             nameEn: edge.node.nameEn,
