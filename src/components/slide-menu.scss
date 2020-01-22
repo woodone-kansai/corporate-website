@@ -6,5 +6,8 @@
   .mm-item {
     color: #ffffff;
     padding: 23px 0;
+    &:focus {
+      outline: none;
+    }
   }
 }
