@@ -1,8 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 import SwiperThumb from './swiper-thumb'
-import Layout from "./layout";
-import SEO from "./seo";
+import Layout from './layout'
+import SEO from './seo'
+
+import style from '../styles/property-detail.css'
 
 const PropertyDetail = ({ data }) => {
   const {
@@ -53,6 +55,9 @@ const PropertyDetail = ({ data }) => {
           </ul>
         </div>
       </div>
+      <style jsx>
+        {style}
+      </style>
     </Layout>
   );
 };

@@ -1,7 +1,0 @@
-import("./src/pages/gallery.scss")
-import("./src/components/property-images.scss")
-import("./src/components/property-detail.scss")
-import("./src/components/footer.scss")
-import("./src/components/swiper-thumb.scss")
-import("./src/components/swiper-modal.scss")
-import("./src/components/swiper.css")

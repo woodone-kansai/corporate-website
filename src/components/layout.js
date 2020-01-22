@@ -6,8 +6,9 @@ import SlideMenu from './slide-menu'
 import Header from "./header"
 import Footer from "./footer"
 
-import baseStyle from '../base.css'
-import resetStyle from '../reset.css'
+import baseStyle from '../styles/base.css'
+import resetStyle from '../styles/reset.css'
+import swiperStyle from '../styles/swiper.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -45,6 +46,9 @@ const Layout = ({ children }) => {
       </style>
       <style jsx>
         {baseStyle}
+      </style>
+      <style jsx>
+        {swiperStyle}
       </style>
     </Fragment>
   )

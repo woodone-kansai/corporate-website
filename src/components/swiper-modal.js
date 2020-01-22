@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import SwiperLib from 'swiper'
+
+import style from '../styles/swiper-modal.css'
 
 class SwiperModal extends Component {
   componentDidMount() {
@@ -20,19 +22,24 @@ class SwiperModal extends Component {
     const { images } = this.props
 
     return (
-      <div className="swiper-modal">
-        <div className="swiper-container">
-          <div className="swiper-wrapper">
-            {
-              images.map(image => (
-                <div className="swiper-slide" key={`${image.id}-topImage`} style={{ backgroundImage: `url(${image.file.url})` }} />
-              ))
-            }
+      <Fragment>
+        <div className="swiper-modal">
+          <div className="swiper-container">
+            <div className="swiper-wrapper">
+              {
+                images.map(image => (
+                  <div className="swiper-slide" key={`${image.id}-topImage`} style={{ backgroundImage: `url(${image.file.url})` }} />
+                ))
+              }
+            </div>
+            <div className="swiper-button-next swiper-button"></div>
+            <div className="swiper-button-prev swiper-button"></div>
           </div>
-          <div className="swiper-button-next swiper-button"></div>
-          <div className="swiper-button-prev swiper-button"></div>
         </div>
-      </div>
+        <style jsx>
+          {style}
+        </style>
+      </Fragment>
     )
   }
 }

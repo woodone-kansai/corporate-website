@@ -1,9 +1,11 @@
-import React, { Component } from "react"
-import { graphql, Link } from "gatsby"
+import React, { Component } from 'react'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import SwiperModal from './swiper-modal'
-import Layout from "./layout"
-import SEO from "./seo"
+import Layout from './layout'
+import SEO from './seo'
+
+import style from '../styles/property-images.css'
 
 class PropertyDetail extends Component {
   constructor(props) {
@@ -95,6 +97,9 @@ class PropertyDetail extends Component {
             ) : null
           }
         </div>
+        <style jsx>
+          {style}
+        </style>
       </Layout>
     )
   }
