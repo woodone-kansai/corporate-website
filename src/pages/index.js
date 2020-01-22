@@ -1,10 +1,12 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Swiper from '../components/swiper';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+
+import style from './index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
@@ -73,6 +75,9 @@ const IndexPage = ({ data }) => {
           </Link>
         </div>
       </div>
+      <style jsx global>
+        {style}
+      </style>
     </Layout>
   )
 }

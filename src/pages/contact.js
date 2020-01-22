@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import style from './contact.css'
+
 const ContactPage = ({ data }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -126,6 +128,9 @@ const ContactPage = ({ data }) => {
           <button className="submit-button" type="submit">送信</button>
         </form>
       </div>
+      <style jsx>
+        {style}
+      </style>
     </Layout>
   )
 }
