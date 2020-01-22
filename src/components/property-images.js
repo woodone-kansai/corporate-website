@@ -85,7 +85,7 @@ class PropertyDetail extends Component {
 
                   {
                     activeCase ? (
-                      <Link className="property-link" to={`/properties/${activeCase}`}>
+                      <Link className="property-link" to={`/properties/${activeCase}/`}>
                         この写真の建築事例をもっと見る
                       </Link>
                     ) : null

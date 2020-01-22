@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
         <ul className="category-list">
           {categories.map(({ node: category }) => (
             <li className="category-list-item" key={category.id}>
-              <Link to={`/property-images/${category.nameEn}`} className="category-inner">
+              <Link to={`/property-images/${category.nameEn}/`} className="category-inner">
                 <Img fluid={category.image.fluid} alt={category.nameJa} />
                 <div className="category-text">
                   <h3 className="category-title en">{category.nameEn.toUpperCase()}</h3>
