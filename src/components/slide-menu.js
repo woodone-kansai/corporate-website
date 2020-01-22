@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { slide as Menu } from 'react-burger-menu'
 
 const SlideMenu = () => (
-  <Menu right className={ 'mobile-menu' }>
+  <Menu right className={ 'mobile-menu' } overlayClassName={ "mm-overlay" }>
     <Link className="mm-item" to="/gallery/">建築事例</Link>
     <Link className="mm-item" to="/recruit/">リクルート</Link>
     <Link className="mm-item" to="/about/">会社情報</Link>
