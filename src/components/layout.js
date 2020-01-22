@@ -27,6 +27,16 @@ const Layout = ({ children }) => {
         </div>
         <Footer />
       </div>
+      <style jsx>{`
+        #content {
+          margin: 90px auto 0;
+          max-width: 960px;
+          #main {
+            padding: 5px;
+            margin-bottom: 40px;
+          }
+        }
+    `}</style>
     </Fragment>
   )
 }

@@ -40,6 +40,12 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-styled-jsx`,
+      options: {
+        jsxPlugins: ["styled-jsx-plugin-sass"],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-155715498-1`,
