@@ -1,5 +1,3 @@
-import("./src/reset.css")
-import("./src/base.scss")
 import("./src/pages/index.scss")
 import("./src/pages/about.scss")
 import("./src/pages/recruit.scss")

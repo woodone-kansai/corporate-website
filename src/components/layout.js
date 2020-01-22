@@ -6,6 +6,9 @@ import SlideMenu from './slide-menu'
 import Header from "./header"
 import Footer from "./footer"
 
+import baseStyle from '../base.css'
+import resetStyle from '../reset.css'
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -36,7 +39,13 @@ const Layout = ({ children }) => {
             margin-bottom: 40px;
           }
         }
-    `}</style>
+      `}</style>
+      <style jsx>
+        {resetStyle}
+      </style>
+      <style jsx>
+        {baseStyle}
+      </style>
     </Fragment>
   )
 }
