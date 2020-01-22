@@ -1,12 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import style from './recruit.css'
+import style from '../styles/recruit.css'
 
-const RecruitPage = ({ data }) => {
+const RecruitPage = () => {
   const { site } = useStaticQuery(
     graphql`
       query {

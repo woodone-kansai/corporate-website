@@ -1,6 +1,6 @@
-import { global } from 'styled-jsx/css'
+import css from 'styled-jsx/css'
 
-export default global`
+export default css.global`
   .home {
     .top-image-slider {
       position: relative;

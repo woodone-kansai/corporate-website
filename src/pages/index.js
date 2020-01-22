@@ -6,7 +6,7 @@ import Swiper from '../components/swiper';
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import style from './index.css'
+import style from '../styles/index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges

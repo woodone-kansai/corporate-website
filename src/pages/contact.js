@@ -1,12 +1,12 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
-import style from './contact.css'
+import style from '../styles/contact.css'
 
-const ContactPage = ({ data }) => {
+const ContactPage = () => {
   const { site } = useStaticQuery(
     graphql`
       query {
