@@ -11,11 +11,11 @@ class SwiperModal extends Component {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+    })
 
     swiperModal.on('slideChange', () => {
       this.props.onSlideChange(swiperModal.activeIndex)
-    });
+    })
   }
 
   render() {

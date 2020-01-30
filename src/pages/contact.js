@@ -34,9 +34,10 @@ const ContactPage = () => {
         <form
           name="contact"
           method="POST"
-          action="/"
+          action="/contact"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={() => alert('お問い合わせいただきありがとうございました。\n内容を確認した後、担当者より連絡いたします。')}
         >
 
           <input type="hidden" name="form-name" value="contact" />

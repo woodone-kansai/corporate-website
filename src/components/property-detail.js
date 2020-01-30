@@ -14,7 +14,7 @@ const PropertyDetail = ({ data }) => {
     siteArea,
     totalFloorArea,
     tag
-  } = data.contentfulProperty;
+  } = data.contentfulProperty
   const description = `ウッドワン関西で叶えた理想の住まいを集めました。
     外観デザイン、リビング、階段などのカテゴリごとにご紹介しています。
     あなたのお気に入りを見つけてください。
@@ -59,10 +59,10 @@ const PropertyDetail = ({ data }) => {
         {style}
       </style>
     </Layout>
-  );
-};
+  )
+}
 
-export default PropertyDetail;
+export default PropertyDetail
 export const pageQuery = graphql`
   query($case: String!) {
     contentfulProperty(case: { eq: $case }) {
@@ -89,4 +89,4 @@ export const pageQuery = graphql`
       tag
     }
   }
-`;
+`

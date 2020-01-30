@@ -11,7 +11,7 @@ class Swiper extends Component {
       freeMode: true,
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
-    });
+    })
     new SwiperLib('.gallery-top', {
       spaceBetween: 10,
       navigation: {
@@ -21,7 +21,7 @@ class Swiper extends Component {
       thumbs: {
         swiper: galleryThumbs
       }
-    });
+    })
   }
 
   render() {

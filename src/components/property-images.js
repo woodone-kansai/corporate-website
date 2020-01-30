@@ -65,7 +65,11 @@ class PropertyDetail extends Component {
 
           <ul className="property-image-container">
             {propertyImages.map(({ node: pImage }, index) => (
-              <li className="property-image-item" key={pImage.id} onClick={() => this.onClickImage(index, pImage)}>
+              <li
+                key={pImage.id}
+                className="property-image-item"
+                onClick={() => this.onClickImage(index, pImage)}
+              >
                 <div className="property-image-inner">
                   <Img fluid={pImage.squareImage.fluid} />
                 </div>
