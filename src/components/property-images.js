@@ -43,7 +43,9 @@ class PropertyDetail extends Component {
     const { data: { allContentfulPropertyImage, contentfulPropertyImageCategory } } = this.props
 
     const propertyImages = allContentfulPropertyImage.edges
-    const {
+      .sort((a, b) => a.node.name.split('-').slice(-1)[0] - b.node.name.split('-').slice(-1)[0])
+
+      const {
       nameEn,
       nameJa,
       body,
@@ -124,10 +126,11 @@ export const pageQuery = graphql`
         body
       }
     }
-    allContentfulPropertyImage(sort: {fields: name}, filter: {category: {elemMatch: {nameEn: {eq: $nameEn}}}}) {
+    allContentfulPropertyImage(filter: {category: {elemMatch: {nameEn: {eq: $nameEn}}}}) {
       edges {
         node {
           id
+          name
           originalImage {
             id
             file {
