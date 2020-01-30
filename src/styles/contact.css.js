@@ -26,13 +26,18 @@ export default css`
     form {
       max-width: 500px;
       margin: 50px auto;
+      @media (max-width: 768px) {
+        padding: 0 5px;
+        margin: 40px auto 0;
+      }
       .form-item {
         margin-bottom: 30px;
         label {
           display: flex;
           .label-text {
-            flex-basis: 40%;
-            margin-right: 10px;
+            width: 40%;
+            padding-right: 10px;
+            padding-top: 5px;
             font-size: 15px;
             @media (max-width: 768px) {
               font-size: 12px;
@@ -50,7 +55,7 @@ export default css`
             @media (max-width: 768px) {
               font-size: 12px;
             }
-            flex-basis: 60%;
+            width: 60%;
             border: 1px solid grey;
             padding: 5px;
             background-color: white;

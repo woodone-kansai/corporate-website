@@ -148,7 +148,7 @@ const ContactPage = () => {
           <p className="form-item">
             <label>
               <span className="label-text">電話連絡可能時間帯</span>
-              <input type="text" name="電話連絡可能時間帯" placeholder="※ご都合のよい時間帯をご記入ください。"/>
+              <textarea name="電話連絡可能時間帯" placeholder="ご都合のよい時間帯をご記入ください。"/>
             </label>
           </p>
 
