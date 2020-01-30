@@ -43,87 +43,113 @@ const ContactPage = () => {
           <input type="hidden" name="form-name" value="contact" />
 
           <p className="form-item">
-            <label>ご計画内容</label>
-            <select name="ご計画内容">
-              <option value="新築">新築</option>
-              <option value="建替">建替</option>
-              <option value="リフォーム">リフォーム</option>
-              <option value="その他">その他</option>
-            </select>
+            <label>
+              <span className="label-text">ご計画内容</span>
+              <select name="ご計画内容">
+                <option value="新築">新築</option>
+                <option value="建替">建替</option>
+                <option value="リフォーム">リフォーム</option>
+                <option value="その他">その他</option>
+              </select>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>土地について</label>
-            <select name="土地について">
-              <option value="所有している">所有している</option>
-              <option value="契約予定">契約予定</option>
-              <option value="検討">検討</option>
-            </select>
+            <label>
+              <span className="label-text">土地について</span>
+              <select name="土地について">
+                <option value="所有している">所有している</option>
+                <option value="契約予定">契約予定</option>
+                <option value="検討">検討</option>
+              </select>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>建築予定エリア</label>
-            <input name="建築予定エリア" type="text" placeholder="例：兵庫県宝塚市"/>
+            <label>
+              <span className="label-text">建築予定エリア</span>
+              <input name="建築予定エリア" type="text" placeholder="例：兵庫県宝塚市"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>建築予定時期</label>
-            <select name="建築予定時期">
-              <option value="現在計画中">現在計画中</option>
-              <option value="半年以内">半年以内</option>
-              <option value="１年以内">１年以内</option>
-              <option value="１～２年以内">１～２年以内</option>
-              <option value="将来">将来</option>
-            </select>
+            <label>
+              <span className="label-text">建築予定時期</span>
+              <select name="建築予定時期">
+                <option value="現在計画中">現在計画中</option>
+                <option value="半年以内">半年以内</option>
+                <option value="１年以内">１年以内</option>
+                <option value="１～２年以内">１～２年以内</option>
+                <option value="将来">将来</option>
+              </select>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>建築予算</label>
-            <input type="text" name="建築予算" placeholder="例：〇〇万円くらい"/>
+            <label>
+              <span className="label-text">建築予算</span>
+              <input type="text" name="建築予算" placeholder="例：〇〇万円くらい"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>お問合内容</label>
-            <select name="お問い合わせ内容">
-              <option value="カタログ請求">カタログ請求</option>
-              <option value="間取りや費用について相談したい">間取りや費用について相談したい</option>
-              <option value="直接会って相談したい">直接会って相談したい</option>
-            </select>
+            <label>
+              <span className="label-text">お問合内容</span>
+              <select name="お問い合わせ内容">
+                <option value="カタログ請求">カタログ請求</option>
+                <option value="間取りや費用について相談したい">間取りや費用について相談したい</option>
+                <option value="直接会って相談したい">直接会って相談したい</option>
+              </select>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>ご質問等</label>
-            <textarea name="ご質問等" placeholder="ご質問等があればご記載ください。"></textarea>
+            <label>
+              <span className="label-text">ご質問等</span>
+              <textarea name="ご質問等" placeholder="ご質問等があればご記載ください。"></textarea>
+            </label>
           </p>
 
           <p className="form-item">
-            <label className="required">お名前</label>
-            <input required type="text" name="お名前"/>
+            <label className="required">
+              <span className="label-text">お名前</span>
+              <input required type="text" name="お名前"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label className="required">フリガナ</label>
-            <input required type="text" name="フリガナ"/>
+            <label className="required">
+              <span className="label-text">フリガナ</span>
+              <input required type="text" name="フリガナ"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label className="required">メールアドレス</label>
-            <input required type="email" name="メールアドレス"/>
+            <label className="required">
+              <span className="label-text">メールアドレス</span>
+              <input required type="email" name="メールアドレス"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label className="required">ご住所</label>
-            <input required type="text" name="ご住所"/>
+            <label className="required">
+              <span className="label-text">ご住所</span>
+              <input required type="text" name="ご住所"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label className="required">電話番号</label>
-            <input required type="tel" name="電話番号"/>
+            <label className="required">
+              <span className="label-text">電話番号</span>
+              <input required type="tel" name="電話番号"/>
+            </label>
           </p>
 
           <p className="form-item">
-            <label>電話連絡可能時間帯</label>
-            <input type="text" name="電話連絡可能時間帯" placeholder="※ご都合のよい時間帯をご記入ください。"/>
+            <label>
+              <span className="label-text">電話連絡可能時間帯</span>
+              <input type="text" name="電話連絡可能時間帯" placeholder="※ご都合のよい時間帯をご記入ください。"/>
+            </label>
           </p>
 
           <button className="submit-button" type="submit">送信</button>

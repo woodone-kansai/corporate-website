@@ -65,23 +65,28 @@ class PropertyDetail extends Component {
 
           <ul className="property-image-container">
             {propertyImages.map(({ node: pImage }, index) => (
-              <li
+              <button
                 key={pImage.id}
                 className="property-image-item"
                 onClick={() => this.onClickImage(index, pImage)}
+                onKeyDown={() => this.onClickImage(index, pImage)}
               >
                 <div className="property-image-inner">
                   <Img fluid={pImage.squareImage.fluid} />
                 </div>
-              </li>
+              </button>
             ))}
           </ul>
 
           {
-            activeIndex ? (
+            activeIndex !== null ? (
               <div className="gallery-modal-container">
                 <div className="gallery-modal">
-                  <div className="close-button" onClick={this.onClickClose} />
+                  <button
+                    className="close-button"
+                    onClick={this.onClickClose}
+                    onKeyDown={this.onClickClose}
+                  />
 
                   <SwiperModal
                     images={propertyImages.map(pi => pi.node.originalImage)}

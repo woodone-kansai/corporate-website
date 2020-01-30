@@ -28,34 +28,36 @@ export default css`
       margin: 50px auto;
       .form-item {
         margin-bottom: 30px;
-        display: flex;
         label {
-          flex-basis: 40%;
-          margin-right: 10px;
-          font-size: 15px;
-          @media (max-width: 768px) {
-            font-size: 12px;
-          }
-          &.required {
-            &::before {
-              content: '*';
-              color: red;
-              padding-right: 4px;
+          display: flex;
+          .label-text {
+            flex-basis: 40%;
+            margin-right: 10px;
+            font-size: 15px;
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+            &.required {
+              &::before {
+                content: '*';
+                color: red;
+                padding-right: 4px;
+              }
             }
           }
-        }
-        input, select, textarea {
-          font-size: 15px;
-          @media (max-width: 768px) {
-            font-size: 12px;
+          input, select, textarea {
+            font-size: 15px;
+            @media (max-width: 768px) {
+              font-size: 12px;
+            }
+            flex-basis: 60%;
+            border: 1px solid grey;
+            padding: 5px;
+            background-color: white;
           }
-          flex-basis: 60%;
-          border: 1px solid grey;
-          padding: 5px;
-          background-color: white;
-        }
-        textarea {
-          height: 45px;
+          textarea {
+            height: 45px;
+          }
         }
       }
       .submit-button {
