@@ -111,36 +111,36 @@ const ContactPage = () => {
           </p>
 
           <p className="form-item">
-            <label className="required">
-              <span className="label-text">お名前</span>
+            <label>
+              <span className="label-text required">お名前</span>
               <input required type="text" name="お名前"/>
             </label>
           </p>
 
           <p className="form-item">
-            <label className="required">
-              <span className="label-text">フリガナ</span>
+            <label>
+              <span className="label-text required">フリガナ</span>
               <input required type="text" name="フリガナ"/>
             </label>
           </p>
 
           <p className="form-item">
-            <label className="required">
-              <span className="label-text">メールアドレス</span>
+            <label>
+              <span className="label-text required">メールアドレス</span>
               <input required type="email" name="メールアドレス"/>
             </label>
           </p>
 
           <p className="form-item">
-            <label className="required">
-              <span className="label-text">ご住所</span>
+            <label>
+              <span className="label-text required">ご住所</span>
               <input required type="text" name="ご住所"/>
             </label>
           </p>
 
           <p className="form-item">
-            <label className="required">
-              <span className="label-text">電話番号</span>
+            <label>
+              <span className="label-text required">電話番号</span>
               <input required type="tel" name="電話番号"/>
             </label>
           </p>
