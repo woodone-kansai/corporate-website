@@ -74,8 +74,8 @@ const AboutPage = () => {
               <td>10,000,000円</td>
             </tr>
             <tr>
-              <th>従業員</th>
-              <td>5名</td>
+              <th>従業員数</th>
+              <td>7名</td>
             </tr>
             <tr>
               <th>建築業許可</th>
