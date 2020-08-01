@@ -4,7 +4,7 @@ import style from '../styles/about.css'
 
 const AboutPage = () => (
   <Fragment>
-    <div className="about" id="about">
+    <div className="about">
       <div className="heading-about-container">
         <h2 className="heading-about en">COMPANY</h2>
         <hr />
