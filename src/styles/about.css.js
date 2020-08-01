@@ -2,9 +2,9 @@ import css from 'styled-jsx/css'
 
 export default css`
   .about {
-    margin-top: 70px;
+    margin-top: 120px;
     @media (max-width: 768px) {
-      margin-top: 27px;
+      margin-top: 100px;
     }
     .heading-about-container {
       hr {

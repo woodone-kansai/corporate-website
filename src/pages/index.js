@@ -5,6 +5,7 @@ import Swiper from '../components/swiper';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import About from '../components/about'
 
 import style from '../styles/index.css'
 
@@ -15,6 +16,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="トップページ"/>
+
       <div className="home">
         <div className="top-image-slider">
           <Swiper options={{
@@ -71,10 +73,13 @@ const IndexPage = ({ data }) => {
 
         <div className="gallery-link-container">
           <Link className="gallery-link" to="/gallery/">
-            建築実例をもっと見る >
+            建築実例をもっと見る &gt;
           </Link>
         </div>
       </div>
+
+      <About />
+
       <style jsx global>
         {style}
       </style>

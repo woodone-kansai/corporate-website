@@ -7,7 +7,7 @@ const SlideMenu = () => (
     <Menu right className={ 'mobile-menu' } overlayClassName={ "mm-overlay" }>
       <Link className="mm-item" to="/gallery/">建築事例</Link>
       <Link className="mm-item" to="/recruit/">リクルート</Link>
-      <Link className="mm-item" to="/about/">会社情報</Link>
+      <Link className="mm-item" to="#about">会社情報</Link>
       <Link className="mm-item" to="/contact/">資料請求・お問い合わせ</Link>
     </Menu>
     <style jsx global>{`
