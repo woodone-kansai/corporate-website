@@ -33,7 +33,7 @@ export default css`
         padding: .5rem;
         margin-left: .5rem;
         img {
-          width: 25px;
+          width: 20px;
         }
         span {
           display: table-cell;
