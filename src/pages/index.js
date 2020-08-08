@@ -17,7 +17,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="トップページ"/>
-
       <ContactBanner />
 
       <div className="home">
