@@ -5,6 +5,7 @@ import Swiper from '../components/swiper';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ContactBanner from '../components/contact-banner'
 import About from '../components/about'
 
 import style from '../styles/index.css'
@@ -16,6 +17,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="トップページ"/>
+
+      <ContactBanner />
 
       <div className="home">
         <div className="top-image-slider">
