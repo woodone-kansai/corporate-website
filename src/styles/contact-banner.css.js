@@ -5,12 +5,11 @@ export default css`
     background-color: #232323;
     padding: 8px;
     position: fixed;
-    top: 20%;
+    bottom: 18%;
     right: 0;
     z-index: 2;
     @media (max-width: 768px) {
       width: 100%;
-      top: auto;
       bottom: 0;
     }
     :global(.banner-link) {

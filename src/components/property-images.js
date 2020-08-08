@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import SwiperModal from './swiper-modal'
 import Layout from './layout'
 import SEO from './seo'
+import ContactBanner from '../components/contact-banner'
 
 import style from '../styles/property-images.css'
 
@@ -54,6 +55,8 @@ class PropertyDetail extends Component {
     return (
       <Layout>
         <SEO title={nameJa} description={body.body} />
+        <ContactBanner />
+
         <div className="property-images">
           <div className="heading-property-image-container">
             <h2 className="heading-property-image en">{nameEn.toUpperCase()}</h2>

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import SwiperThumb from './swiper-thumb'
 import Layout from './layout'
 import SEO from './seo'
+import ContactBanner from '../components/contact-banner'
 
 import style from '../styles/property-detail.css'
 
@@ -23,6 +24,8 @@ const PropertyDetail = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} />
+      <ContactBanner />
+      
       <div className="property-detail">
         <div className="heading-property-container">
           <h2 className="heading-property">{title}</h2>
