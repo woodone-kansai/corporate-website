@@ -39,8 +39,7 @@ const ContactPage = () => {
           netlify-honeypot="bot-field"
           onSubmit={() => alert('お問い合わせいただきありがとうございました。\n内容を確認した後、担当者より連絡いたします。')}
         >
-          {/* <input type="hidden" name="form-name" value="contact" /> */}
-          <p class="hidden">
+          <p className="form-item hidden">
             <label>
               Don’t fill this out if you're human:
               <input name="bot-field" />
