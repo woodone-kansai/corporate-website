@@ -66,6 +66,7 @@ export default css`
         }
       }
       .submit-button {
+        cursor: pointer;
         border: none;
         display: block;
         width: 60%;
