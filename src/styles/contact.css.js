@@ -32,6 +32,9 @@ export default css`
       }
       .form-item {
         margin-bottom: 30px;
+        &.hidden {
+          display: none;
+        }
         label {
           display: flex;
           .label-text {
@@ -66,6 +69,7 @@ export default css`
         }
       }
       .submit-button {
+        cursor: pointer;
         border: none;
         display: block;
         width: 60%;
