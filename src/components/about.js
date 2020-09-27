@@ -55,7 +55,7 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th>従業員数</th>
-            <td>7名</td>
+            <td>11名</td>
           </tr>
           <tr>
             <th>建築業許可</th>
