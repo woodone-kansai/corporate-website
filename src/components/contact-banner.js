@@ -1,42 +1,31 @@
-import React, { Fragment } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import React from 'react'
+import { Link } from 'gatsby'
+
+import iconInstagram from '../images/icon-instagram.png'
+import iconLine from '../images/icon-line.png'
+import iconBook from '../images/icon-book.png'
 
 import style from '../styles/contact-banner.css'
 
-const ContactBanner = () => {
-  const data = useStaticQuery(graphql`
-    query ContactBannerQuery {
-      allContentfulAsset(filter: { title: { in: ["icon-book", "icon-play"] } }) {
-        edges {
-          node {
-            file {
-              url
-            }
-          }
-        }
-      }
-    }
-  `)
-  const iconPlay = data.allContentfulAsset.edges[0].node
-  const iconBook = data.allContentfulAsset.edges[1].node
+const ContactBanner = () => (
+  <div className="contact-banner-container">
+    <a className="icon-banner icon-instagram" href="https://www.instagram.com/woodonekansai20/" target="_blank">
+      <img src={iconInstagram} alt="instagram icon" />
+    </a>
+    <a className="icon-banner icon-line" href="https://lin.ee/hG96XVr" target="_blank">
+      <img src={iconLine} alt="line icon" />
+    </a>
+    <Link className="banner-link" to="/contact">
+      <img className="icon-book" src={iconBook} alt="book icon" />
+      <p className="banner-text">
+        【無料】施工事例集を取り寄せる
+      </p>
+    </Link>
 
-  return(
-    <Fragment>
-      <div className="contact-banner-container">
-        <Link className="banner-link" to="/contact">
-          <img className="book-icon" src={iconBook.file.url} alt="book icon" />
-          <p className="banner-text">【無料】施工事例集を取り寄せる</p>
-          <div className="play-button">
-            <img src={iconPlay.file.url} alt="play icon" />
-            <span>詳細</span>
-          </div>
-        </Link>
-      </div>
-      <style jsx>
-        {style}
-      </style>
-    </Fragment>
-  )
-}
+    <style jsx>
+      {style}
+    </style>
+  </div>
+)
 
 export default ContactBanner

@@ -2,41 +2,64 @@ import css from 'styled-jsx/css'
 
 export default css`
   .contact-banner-container {
-    background-color: #232323;
-    padding: 8px;
     position: fixed;
     bottom: 18%;
-    right: 0;
+    margin-left: 960px;
     z-index: 2;
-    @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1100px) {
+      margin: 0px;
+      right: 5px;
+    }
+    @media (max-width: 599px) {
+      flex-direction: row;
       width: 100%;
       bottom: 0;
+      right: 0;
+      padding: 0px;
+    }
+    .icon-banner {
+      img {
+        width: 60px;
+        @media (max-width: 599px) {
+          width: 50px;
+        }
+      }
+      &.icon-instagram, &.icon-line {
+        margin-bottom: 16px;
+        background-color: black;
+        @media (max-width: 599px) {
+          margin-bottom: 0;
+          margin-right: 4px;
+        }
+      }
     }
     :global(.banner-link) {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .book-icon {
+      .icon-book {
         width: 60px;
+        @media (max-width: 599px) {
+          width: 50px;
+        }
+      }
+      color: white;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 599px) {
+        flex-direction: row;
+        width: 100%;
       }
       .banner-text {
         font-size: 1rem;
-        @media (max-width: 768px) {
-          font-size: .75rem;
-        }
-      }
-      .play-button {
-        display: table;
-        border: 1px solid white;
-        padding: .5rem;
-        margin-left: .5rem;
-        img {
-          width: 20px;
-        }
-        span {
-          display: table-cell;
-          vertical-align: middle;
+        writing-mode: vertical-rl;
+        margin-top: -8px;
+        margin-bottom: 16px;
+        @media (max-width: 599px) {
+          font-size: 14px;
+          writing-mode: initial;
+          margin: 0 0 0 -8px;
         }
       }
     }
