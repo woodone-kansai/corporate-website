@@ -44,18 +44,16 @@ export default css`
       }
       color: white;
       background-color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: block;
       @media (max-width: 599px) {
-        flex-direction: row;
+        display: flex;
+        align-items: center;
         width: 100%;
       }
       .banner-text {
         font-size: 1rem;
         writing-mode: vertical-rl;
-        margin-top: -8px;
-        margin-bottom: 16px;
+        margin: -8px auto 16px;
         @media (max-width: 599px) {
           font-size: 14px;
           writing-mode: initial;
