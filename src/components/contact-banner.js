@@ -9,10 +9,10 @@ import style from '../styles/contact-banner.css'
 
 const ContactBanner = () => (
   <div className="contact-banner-container">
-    <a className="icon-banner icon-instagram" href="https://www.instagram.com/woodonekansai20/" target="_blank">
+    <a className="icon-banner icon-instagram" href="https://www.instagram.com/woodonekansai20/" target="_blank" rel="noopener noreferrer">
       <img src={iconInstagram} alt="instagram icon" />
     </a>
-    <a className="icon-banner icon-line" href="https://lin.ee/hG96XVr" target="_blank">
+    <a className="icon-banner icon-line" href="https://lin.ee/hG96XVr" target="_blank" rel="noopener noreferrer">
       <img src={iconLine} alt="line icon" />
     </a>
     <Link className="banner-link" to="/contact">
