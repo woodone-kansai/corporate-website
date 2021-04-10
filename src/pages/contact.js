@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Heading from '../components/heading'
 
 import style from '../styles/contact.css'
 
@@ -25,11 +26,10 @@ const ContactPage = () => {
     <Layout>
       <SEO title="お問合せフォーム" description={metaDescription} />
       <div className="contact">
-        <div className="heading-contact-container">
-          <h2 className="heading-contact en">Contact</h2>
-          <hr />
-          <h2 className="heading-contact ja">お問合せフォーム</h2>
-        </div>
+        <Heading
+          enText="Contact"
+          jaText="お問合せフォーム"
+        />
 
         <form
           name="contact"

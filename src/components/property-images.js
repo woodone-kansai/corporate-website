@@ -5,6 +5,7 @@ import SwiperModal from './swiper-modal'
 import Layout from './layout'
 import SEO from './seo'
 import ContactBanner from '../components/contact-banner'
+import Heading from '../components/heading'
 
 import style from '../styles/property-images.css'
 
@@ -58,11 +59,10 @@ class PropertyDetail extends Component {
         <ContactBanner />
 
         <div className="property-images">
-          <div className="heading-property-image-container">
-            <h2 className="heading-property-image en">{nameEn.toUpperCase()}</h2>
-            <hr />
-            <h2 className="heading-property-image ja">{nameJa}</h2>
-          </div>
+          <Heading
+            enText={nameEn.toUpperCase()}
+            jaText={nameJa}
+          />
 
           <div className="description">
             {body.body}

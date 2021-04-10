@@ -41,19 +41,11 @@ export default css.global`
         padding: 0 10px;
       }
     }
-    .heading-works-container {
-      margin-bottom: 20px;
-      .heading-works {
-        color: #3a3a3a;
-        text-align: center;
-        &.en {
-          font-size: 30px;
-          letter-spacing: 0.5em;
-          margin-bottom: 10px;
-        }
-        &.ja {
-          font-size: 20px;
-        }
+
+    .works-section,
+    .projects-section {
+      .heading-container {
+        margin-bottom: 24px;
       }
     }
 
@@ -104,6 +96,10 @@ export default css.global`
     }
 
     .projects-section {
+      margin-top: 120px;
+      @media (max-width: 768px) {
+        margin-top: 100px;
+      }
       .projects-container {
         .project-list {
           display: flex;

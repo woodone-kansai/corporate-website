@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import Heading from '../components/heading'
 
 const Properties = ({ properties }) => {
   return (
     <div className="works-container">
-      <div className="heading-works-container">
-        <h2 className="heading-works en">WORKS</h2>
-        <h2 className="heading-works ja">- 施工事例 -</h2>
-      </div>
+      <Heading
+        enText="WORKS"
+        jaText="施工事例"
+      />
 
       <ul className="property-list">
         {properties.map(({ node: property }) => (

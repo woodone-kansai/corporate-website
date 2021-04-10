@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
+import Heading from '../components/heading'
 
 const Progress = ({ project }) => {
   const steps = project.projectType.match(/リノベーション/)
@@ -9,7 +10,10 @@ const Progress = ({ project }) => {
   return (
     <ul className="steps">
       {steps.map((step, index) => (
-        <li className={`step ${index <= steps.indexOf(project.progress) ? 'done' : ''}`}>
+        <li
+          key={step}
+          className={`step ${index <= steps.indexOf(project.progress) ? 'done' : ''}`}
+        >
           <span>{step}</span>
         </li>
       ))}
@@ -20,10 +24,10 @@ const Progress = ({ project }) => {
 const Projects = ({ projects }) => {
   return (
     <div className="projects-container">
-      <div className="heading-works-container">
-        <h2 className="heading-works en">PROJECTS</h2>
-        <h2 className="heading-works ja">- 進行中の家 -</h2>
-      </div>
+      <Heading
+        enText="PROJECTS"
+        jaText="進行中の家"
+      />
 
       <ul className="project-list">
         {projects.map(({ node: project }) => (
