@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import Swiper from '../components/swiper';
 
+import Properties from '../components/properties'
+import Projects from '../components/projects'
+import Swiper from '../components/swiper'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ContactBanner from '../components/contact-banner'
@@ -12,6 +13,7 @@ import style from '../styles/index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
+  const projects = data.allContentfulPropertyInProgress.edges
   const slides = data.allContentfulAsset.edges
 
   return (
@@ -55,24 +57,13 @@ const IndexPage = ({ data }) => {
           これからも皆さまの生活に寄り添った快適な間取り、性能、デザインを追求してまいります。
         </p>
 
-        <div className="heading-works-container">
-          <h2 className="heading-works en">WORKS</h2>
-          <h2 className="heading-works ja">- 施工事例 -</h2>
-        </div>
+        <section className="works-section">
+          <Properties properties={properties} />
+        </section>
 
-        <ul className="property-list">
-          {properties.map(({ node: property }) => (
-            <li className="property-list-item" key={property.id}>
-              <Link to={`/properties/${property.case}/`} className="property-inner">
-                <Img className="property-image" fluid={property.eyeCatchImage.fluid} alt={property.title} />
-                <div className="property-text">
-                  <p className="property-case">{`CASE${property.case}`}</p>
-                  <h3 className="property-title">{property.title}</h3>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <section className="projects-section">
+          <Projects projects={projects} />
+        </section>
 
         <div className="gallery-link-container" id="about">
           <Link className="gallery-link" to="/gallery/">
@@ -91,6 +82,7 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
+
 export const query = graphql`
   query IndexPageQuery {
     allContentfulProperty(sort: {fields: case}) {
@@ -99,6 +91,24 @@ export const query = graphql`
           id
           case
           title
+          eyeCatchImage {
+            fluid(maxWidth: 455) {
+              ...GatsbyContentfulFluid
+            }
+            file {
+              url
+            }
+          }
+        }
+      }
+    }
+    allContentfulPropertyInProgress {
+      edges {
+        node {
+          id
+          title
+          projectType
+          progress
           eyeCatchImage {
             fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
