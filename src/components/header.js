@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useStaticQuery, Link } from 'gatsby'
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
   const logo = data.contentfulAsset
 
   return(
-    <Fragment>
+    <>
       <header id="header">
         <div className="header-logo">
           <Link to="/">
@@ -69,7 +69,7 @@ const Header = () => {
           }
         }
       `}</style>
-    </Fragment>
+    </>
   )
 }
 

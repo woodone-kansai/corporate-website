@@ -16,4 +16,9 @@ export default global`
       display: none!important;
     }
   }
+
+  .anchor-link-target {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
 `

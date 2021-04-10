@@ -59,19 +59,19 @@ const IndexPage = ({ data }) => {
 
         <section className="works-section">
           <Properties properties={properties} />
-        </section>
 
-        <div className="gallery-link-container" id="about">
-          <Link className="gallery-link" to="/gallery/">
-            建築実例をもっと見る &gt;
-          </Link>
-        </div>
+          <div className="gallery-link-container">
+            <Link className="gallery-link" to="/gallery/">
+              建築実例をもっと見る &gt;
+            </Link>
+          </div>
+        </section>
 
         <section className="projects-section">
           <Projects projects={projects} />
         </section>
 
-        <section className="about-section">
+        <section className="about-section anchor-link-target" id="about">
           <About />
         </section>
       </div>

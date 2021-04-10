@@ -93,12 +93,28 @@ export default css.global`
           }
         }
       }
+      .gallery-link-container {
+        text-align: center;
+        margin-top: 40px;
+        .gallery-link {
+          display: inline-block;
+          padding: 15px 35px;
+          background-color: #404040;
+          text-align: center;
+          color: white;
+          font-size: 25px;
+          border-radius: 2px;
+          @media (max-width: 768px) {
+            font-size: 17px;
+          }
+        }
+      }
     }
 
     .projects-section {
-      margin-top: 120px;
+      margin: 120px auto;
       @media (max-width: 768px) {
-        margin-top: 100px;
+        margin: 100px auto;
       }
       .projects-container {
         .project-list {
@@ -163,23 +179,6 @@ export default css.global`
               }
             }
           }
-        }
-      }
-    }
-
-    .gallery-link-container {
-      text-align: center;
-      margin: 40px 0 30px;
-      .gallery-link {
-        display: inline-block;
-        padding: 15px 35px;
-        background-color: #404040;
-        text-align: center;
-        color: white;
-        font-size: 25px;
-        border-radius: 2px;
-        @media (max-width: 768px) {
-          font-size: 17px;
         }
       }
     }

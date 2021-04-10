@@ -2,10 +2,6 @@ import css from 'styled-jsx/css'
 
 export default css`
   .about {
-    margin-top: 120px;
-    @media (max-width: 768px) {
-      margin-top: 100px;
-    }
     .description {
       text-align: center;
       color: #3a3a3a;
