@@ -104,13 +104,14 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPropertyInProgress(sort: {fields: createdAt}) {
+    allContentfulPropertyInProgress(sort: {fields: order}) {
       edges {
         node {
           id
           title
           projectType
           progress
+          order
           eyeCatchImage {
             fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
