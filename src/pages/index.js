@@ -104,7 +104,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPropertyInProgress {
+    allContentfulPropertyInProgress(sort: {fields: createdAt}) {
       edges {
         node {
           id
