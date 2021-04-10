@@ -6,22 +6,6 @@ export default css`
     @media (max-width: 768px) {
       margin-top: 27px;
     }
-    .heading-gallery-container {
-      hr {
-        margin: 15px 0;
-      }
-      .heading-gallery {
-        color: #3a3a3a;
-        text-align: center;
-        &.en {
-          font-size: 30px;
-          letter-spacing: 0.5em;
-        }
-        &.ja {
-          font-size: 20px;
-        }
-      }
-    }
     .description {
       color: #3a3a3a;
       margin: 70px auto;

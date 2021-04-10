@@ -2,26 +2,6 @@ import css from 'styled-jsx/css'
 
 export default css`
   .about {
-    margin-top: 120px;
-    @media (max-width: 768px) {
-      margin-top: 100px;
-    }
-    .heading-about-container {
-      hr {
-        margin: 15px 0;
-      }
-      .heading-about {
-        color: #3a3a3a;
-        text-align: center;
-        &.en {
-          font-size: 30px;
-          letter-spacing: 0.5em;
-        }
-        &.ja {
-          font-size: 20px;
-        }
-      }
-    }
     .description {
       text-align: center;
       color: #3a3a3a;

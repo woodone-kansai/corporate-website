@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ContactBanner from '../components/contact-banner'
+import Heading from '../components/heading'
 
 import style from '../styles/recruit.css'
 
@@ -28,11 +29,10 @@ const RecruitPage = () => {
       <ContactBanner />
 
       <div className="recruit">
-        <div className="heading-recruit-container">
-          <h2 className="heading-recruit en">RECRUIT</h2>
-          <hr />
-          <h2 className="heading-recruit ja">求人情報</h2>
-        </div>
+        <Heading
+          enText="RECRUIT"
+          jaText="求人情報"
+        />
 
         <p className="description">
           募集要項

@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ContactBanner from '../components/contact-banner'
+import Heading from '../components/heading'
 
 import style from '../styles/gallery.css'
 
@@ -21,11 +22,10 @@ const IndexPage = ({ data }) => {
       <ContactBanner />
 
       <div className="gallery">
-        <div className="heading-gallery-container">
-          <h2 className="heading-gallery en">GALLERY</h2>
-          <hr />
-          <h2 className="heading-gallery ja">ギャラリー</h2>
-        </div>
+        <Heading
+          enText="GALLERY"
+          jaText="ギャラリー"
+        />
 
         <p className="description">
           {description}
