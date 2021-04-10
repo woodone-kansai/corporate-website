@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import Heading from '../components/heading'
 
@@ -32,7 +31,7 @@ const Projects = ({ projects }) => {
       <ul className="project-list">
         {projects.map(({ node: project }) => (
           <li className="project-list-item" key={project.id}>
-            <Link to={`/properties/${project.case}/`} className="project-inner">
+            <div className="project-inner">
               <Img className="project-image" fluid={project.eyeCatchImage.fluid} alt={project.title} />
               <div className="project-info">
                 <div className="project-text">
@@ -43,7 +42,7 @@ const Projects = ({ projects }) => {
                   <Progress project={project} />
                 </div>
               </div>
-            </Link>
+            </div>
           </li>
         ))}
       </ul>
