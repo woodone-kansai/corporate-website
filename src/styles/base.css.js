@@ -21,4 +21,9 @@ export default global`
     padding-top: 100px;
     margin-top: -100px;
   }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
 `

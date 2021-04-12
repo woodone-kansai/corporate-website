@@ -34,7 +34,7 @@ export default css`
         .tel {
           font-size: 30px;
           margin-top: 10px;
-          a {
+          :global(a) {
             color: #ffffff;
             text-decoration: none;
           }
