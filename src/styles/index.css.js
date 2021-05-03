@@ -42,57 +42,17 @@ export default css.global`
       }
     }
 
-    .works-section,
-    .projects-section {
+    .list-section {
+      margin-bottom: 120px;
+      @media (max-width: 768px) {
+        margin-bottom: 100px;
+      }
       .heading-container {
         margin-bottom: 24px;
       }
     }
 
-    .works-section {
-      .works-container {
-        .property-list {
-          display: flex;
-          flex-wrap: wrap;
-          .property-list-item {
-            width: 50%;
-            margin-bottom: 20px;
-            .property-inner {
-              padding: 10px;
-              display: block;
-              @media (max-width: 768px) {
-                padding: 3px;
-              }
-              .property-image {
-                width: 100%;
-              }
-              .property-text {
-                margin-left: 20px;
-                @media (max-width: 768px) {
-                  margin-left: 5px;
-                }
-                .property-case {
-                  color: #000000;
-                  letter-spacing: 0.5em;
-                  font-size: 23px;
-                  margin: 10px 0;
-                  @media (max-width: 768px) {
-                    font-size: 15px;
-                    margin: 7px 0;
-                  }
-                }
-                .property-title {
-                  color: #3a3a3a;
-                  font-size: 17px;
-                  @media (max-width: 768px) {
-                    font-size: 13px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    .new-properties-section {
       .gallery-link-container {
         text-align: center;
         margin-top: 40px;
@@ -106,78 +66,6 @@ export default css.global`
           border-radius: 2px;
           @media (max-width: 768px) {
             font-size: 17px;
-          }
-        }
-      }
-    }
-
-    .projects-section {
-      margin: 120px auto;
-      @media (max-width: 768px) {
-        margin: 100px auto;
-      }
-      .projects-container {
-        .project-list {
-          display: flex;
-          flex-wrap: wrap;
-          .project-list-item {
-            width: 50%;
-            margin-bottom: 20px;
-            .project-inner {
-              padding: 10px;
-              display: block;
-              @media (max-width: 768px) {
-                padding: 3px;
-              }
-              .project-image {
-                width: 100%;
-              }
-              .project-info {
-                margin: 16px 20px 0;
-                color: #3a3a3a;
-                @media (max-width: 768px) {
-                  margin: 8px 5px 0;
-                  font-size: 13px;
-                }
-                .project-text {
-                  font-size: 16px;
-                  font-weight: bold;
-                  display: flex;
-                  margin-bottom: 16px;
-                  @media (max-width: 768px) {
-                    font-size: 10px;
-                    margin-bottom: 8px;
-                  }
-                  .project-title {
-                    padding-right: 8px;
-                    border-right: 1px solid #3a3a3a;
-                  }
-                  .project-type {
-                    padding-left: 8px;
-                  }
-                }
-                .project-progress {
-                  .steps {
-                    display: flex;
-                    .step {
-                      width: 100%;
-                      text-align: center;
-                      padding-top: 5px;
-                      margin-right: 1px;
-                      color: #9c9c9b;
-                      border-top: 5px solid #9c9c9b;
-                      &.done {
-                        color: #3a3a3a;
-                        border-top: 5px solid black;
-                      }
-                      span {
-                        writing-mode: vertical-rl;
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       }
