@@ -4,8 +4,8 @@ import styles from '../styles/projects.css'
 
 const Progress = ({ project }) => {
   const steps = project.projectType.match(/リノベーション/)
-    ? ['設計', '解体', '着工', '引渡']
-    : ['設計', '申請', '着工', '上棟', '外装', '内装', '検査', '引渡']
+    ? ['設計', '解体', '着工', '竣工', '引渡']
+    : ['設計', '申請', '着工', '上棟', '外装', '内装', '竣工', '引渡']
   return (
     <ul className="steps">
       {steps.map((step, index) => (
