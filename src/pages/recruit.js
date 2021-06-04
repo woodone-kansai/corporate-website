@@ -85,7 +85,7 @@ const RecruitPage = () => {
             </tr>
             <tr>
               <th></th>
-              <td colSpan="2">info@woodone-kansai.net</td>
+              <td colSpan="2">info.woodonekansai@gmail.com</td>
             </tr>
           </tbody>
         </table>
