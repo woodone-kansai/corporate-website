@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
 
           <div className="gallery-link-container">
             <Link className="gallery-link" to="/gallery/">
-              建築実例をもっと見る &gt;
+              カテゴリー別にもっと見る &gt;
             </Link>
           </div>
         </section>
