@@ -14,6 +14,8 @@ import style from '../styles/index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
+  const propertiesNew = properties.filter((property) => property.node.category === '新築')
+  const propertiesRenov = properties.filter((property) => property.node.category === 'リノベ')
   const projects = data.allContentfulPropertyInProgress.edges
   const slides = data.allContentfulAsset.edges
 
@@ -64,7 +66,7 @@ const IndexPage = ({ data }) => {
               enText="NEW"
               jaText="新築事例"
             />
-            <Properties properties={properties} />
+            <Properties properties={propertiesNew} />
           </div>
 
           <div className="gallery-link-container">
@@ -80,7 +82,7 @@ const IndexPage = ({ data }) => {
               enText="RENOVATION"
               jaText="リノベーション事例"
             />
-            <Properties properties={properties} />
+            <Properties properties={propertiesRenov} />
           </div>
         </section>
 
@@ -116,6 +118,7 @@ export const query = graphql`
           id
           case
           title
+          category
           eyeCatchImage {
             fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
