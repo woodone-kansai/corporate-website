@@ -87,7 +87,7 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allContentfulProperty(sort: {fields: case}) {
+    allContentfulProperty(filter: {category: {eq: "新築"}}, sort: {fields: case}) {
       edges {
         node {
           id
