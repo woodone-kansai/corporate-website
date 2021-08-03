@@ -8,7 +8,7 @@ const Properties = ({ properties }) => {
     <ul className="property-list">
       {properties.map(({ node: property }) => (
         <li className="property-list-item" key={property.id}>
-          <Link to={`/properties/${property.case}/`} className="property-inner">
+          <Link to={`/properties/${property.id}/`} className="property-inner">
             <Img className="property-image" fluid={property.eyeCatchImage.fluid} alt={property.title} />
             <div className="property-text">
               <p className="property-case">{`CASE${property.case}`}</p>

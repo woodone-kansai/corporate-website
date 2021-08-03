@@ -31,10 +31,9 @@ exports.createPages = ({ graphql, actions }) => {
       const propertyDetailComponent = path.resolve("./src/components/property-detail.js")
       result.data.allContentfulProperty.edges.forEach(edge => {
         createPage({
-          path: `/properties/${edge.node.case}/`,
+          path: `/properties/${edge.node.id}/`,
           component: slash(propertyDetailComponent),
           context: {
-            case: edge.node.case,
             id: edge.node.id,
           },
         })
