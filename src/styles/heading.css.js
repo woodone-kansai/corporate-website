@@ -10,7 +10,8 @@ export default css`
       text-align: center;
       &.en {
         font-size: 30px;
-        letter-spacing: 0.5em;
+        letter-spacing: 8px;
+        line-height: 1.3em;
       }
       &.ja {
         font-size: 20px;

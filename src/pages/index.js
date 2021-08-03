@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
         <section className="new-properties-section list-section">
           <div className="works-container">
             <Heading
-              enText="NEW"
+              enText="NEW WORKS"
               jaText="新築事例"
             />
             <Properties properties={propertiesNew} />
@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
         <section className="renovated-properties-section list-section">
           <div className="works-container">
             <Heading
-              enText="RENOVATION"
+              enText="RENOVATION WORKS"
               jaText="リノベーション事例"
             />
             <Properties properties={propertiesRenov} />
