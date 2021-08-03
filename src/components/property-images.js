@@ -15,21 +15,21 @@ class PropertyDetail extends Component {
 
     this.state = {
       activeIndex: null,
-      activeCase: null,
+      activeId: null,
     }
   }
 
   onClickImage = (index, propertyImage) => {
     this.setState({
       activeIndex: index,
-      activeCase: propertyImage.property ? propertyImage.property[0].case : null,
+      activeId: propertyImage.property ? propertyImage.property[0].id : null,
     })
   }
 
   onClickClose = () => {
     this.setState({
       activeIndex: null,
-      activeCase: null,
+      activeId: null,
     })
   }
 
@@ -37,11 +37,11 @@ class PropertyDetail extends Component {
     const { data: { allContentfulPropertyImage } } = this.props
     const propertyImages = allContentfulPropertyImage.edges
     const property = propertyImages[activeIndex].node.property
-    this.setState({ activeCase: property ? property[0].case : null })
+    this.setState({ activeId: property ? property[0].id : null })
   }
 
   render () {
-    const { activeIndex, activeCase } = this.state
+    const { activeIndex, activeId } = this.state
     const { data: { allContentfulPropertyImage, contentfulPropertyImageCategory } } = this.props
 
     const propertyImages = allContentfulPropertyImage.edges
@@ -83,33 +83,29 @@ class PropertyDetail extends Component {
             ))}
           </ul>
 
-          {
-            activeIndex !== null ? (
-              <div className="gallery-modal-container">
-                <div className="gallery-modal">
-                  <button
-                    className="close-button"
-                    onClick={this.onClickClose}
-                    onKeyDown={this.onClickClose}
-                  />
+          {activeIndex && (
+            <div className="gallery-modal-container">
+              <div className="gallery-modal">
+                <button
+                  className="close-button"
+                  onClick={this.onClickClose}
+                  onKeyDown={this.onClickClose}
+                />
 
-                  <SwiperModal
-                    images={propertyImages.map(pi => pi.node.originalImage)}
-                    index={activeIndex}
-                    onSlideChange={this.onSlideChange}
-                  />
+                <SwiperModal
+                  images={propertyImages.map(pi => pi.node.originalImage)}
+                  index={activeIndex}
+                  onSlideChange={this.onSlideChange}
+                />
 
-                  {
-                    activeCase ? (
-                      <Link className="property-link" to={`/properties/${activeCase}/`}>
-                        この写真の建築事例をもっと見る
-                      </Link>
-                    ) : null
-                  }
-                </div>
+                {activeId && (
+                  <Link className="property-link" to={`/properties/${activeId}/`}>
+                    この写真の建築事例をもっと見る
+                  </Link>
+                )}
               </div>
-            ) : null
-          }
+            </div>
+          )}
         </div>
         <style jsx>
           {style}
@@ -146,7 +142,7 @@ export const pageQuery = graphql`
             }
           }
           property {
-            case
+            id
           }
         }
       }

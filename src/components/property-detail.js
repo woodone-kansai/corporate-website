@@ -53,8 +53,8 @@ const PropertyDetail = ({ data }) => {
 
           <ul className="property-spec">
             <li>施工場所：{location}</li>
-            <li>敷地面積：{siteArea}m&sup2;</li>
-            <li>延床面積：{totalFloorArea}m&sup2;</li>
+            {siteArea && <li>敷地面積：{siteArea}m&sup2;</li>}
+            {totalFloorArea && <li>延床面積：{totalFloorArea}m&sup2;</li>}
           </ul>
         </div>
       </div>
@@ -67,8 +67,8 @@ const PropertyDetail = ({ data }) => {
 
 export default PropertyDetail
 export const pageQuery = graphql`
-  query($case: String!) {
-    contentfulProperty(case: { eq: $case }) {
+  query($id: String!) {
+    contentfulProperty(id: { eq: $id }) {
       case
       title
       propertyImages {

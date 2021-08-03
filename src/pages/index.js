@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+import Heading from '../components/heading'
 import Properties from '../components/properties'
 import Projects from '../components/projects'
 import Swiper from '../components/swiper'
@@ -13,6 +14,8 @@ import style from '../styles/index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
+  const propertiesNew = properties.filter((property) => property.node.category === '新築')
+  const propertiesRenov = properties.filter((property) => property.node.category === 'リノベ')
   const projects = data.allContentfulPropertyInProgress.edges
   const slides = data.allContentfulAsset.edges
 
@@ -57,8 +60,14 @@ const IndexPage = ({ data }) => {
           これからも皆さまの生活に寄り添った快適な間取り、性能、デザインを追求してまいります。
         </p>
 
-        <section className="works-section">
-          <Properties properties={properties} />
+        <section className="new-properties-section list-section">
+          <div className="works-container">
+            <Heading
+              enText="NEW WORKS"
+              jaText="新築事例"
+            />
+            <Properties properties={propertiesNew} />
+          </div>
 
           <div className="gallery-link-container">
             <Link className="gallery-link" to="/gallery/">
@@ -67,8 +76,24 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
 
-        <section className="projects-section">
-          <Projects projects={projects} />
+        <section className="renovated-properties-section list-section">
+          <div className="works-container">
+            <Heading
+              enText="RENOVATION WORKS"
+              jaText="リノベーション事例"
+            />
+            <Properties properties={propertiesRenov} />
+          </div>
+        </section>
+
+        <section className="projects-section list-section">
+          <div className="projects-container">
+            <Heading
+              enText="PROJECTS"
+              jaText="進行中の家"
+            />
+            <Projects projects={projects} />
+          </div>
         </section>
 
         <section className="about-section anchor-link-target" id="about">
@@ -93,6 +118,7 @@ export const query = graphql`
           id
           case
           title
+          category
           eyeCatchImage {
             fluid(maxWidth: 455) {
               ...GatsbyContentfulFluid
