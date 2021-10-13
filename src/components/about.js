@@ -59,7 +59,15 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th>従業員数</th>
-            <td>17名</td>
+            <td>20名</td>
+          </tr>
+          <tr>
+            <th>有資格者</th>
+            <td>一級建築士2名</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>二級建築士4名</td>
           </tr>
           <tr>
             <th>建築業許可</th>
