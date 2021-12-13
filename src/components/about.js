@@ -62,12 +62,16 @@ const AboutPage = () => (
             <td>20名</td>
           </tr>
           <tr>
-            <th>有資格者</th>
+            <th>保有資格</th>
             <td>一級建築士2名</td>
           </tr>
           <tr>
             <th></th>
             <td>二級建築士4名</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>木造耐震改修技術者1名</td>
           </tr>
           <tr>
             <th>建築業許可</th>
