@@ -1,19 +1,14 @@
-import React from 'react'
-import Heading from '../components/heading'
+import React from "react"
+import Heading from "../components/heading"
 
-import style from '../styles/about.css'
+import style from "../styles/about.css"
 
 const AboutPage = () => (
   <>
     <div className="about">
-      <Heading
-        enText="COMPANY"
-        jaText="会社概要"
-      />
+      <Heading enText="COMPANY" jaText="会社概要" />
 
-      <p className="description">
-        おかげさまで20周年
-      </p>
+      <p className="description">おかげさまで20周年</p>
 
       <table>
         <tbody>
@@ -27,7 +22,9 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th></th>
-            <td>芦屋事務所：〒659-0062 兵庫県芦屋市宮塚町12番19号 ブルーノ芦屋205</td>
+            <td>
+              芦屋事務所：〒659-0062 兵庫県芦屋市宮塚町12番19号 ブルーノ芦屋205
+            </td>
           </tr>
           <tr>
             <th>TEL</th>
@@ -59,7 +56,7 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th>従業員数</th>
-            <td>20名</td>
+            <td>23名</td>
           </tr>
           <tr>
             <th>保有資格</th>
@@ -100,9 +97,7 @@ const AboutPage = () => (
         </tbody>
       </table>
     </div>
-    <style jsx>
-      {style}
-    </style>
+    <style jsx>{style}</style>
   </>
 )
 
