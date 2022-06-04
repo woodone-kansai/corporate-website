@@ -68,6 +68,10 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th></th>
+            <td>2級建築施工管理技士1名</td>
+          </tr>
+          <tr>
+            <th></th>
             <td>木造耐震改修技術者1名</td>
           </tr>
           <tr>
