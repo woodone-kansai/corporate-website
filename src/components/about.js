@@ -68,7 +68,7 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th></th>
-            <td>2級建築施工管理技士1名</td>
+            <td>二級建築施工管理技士1名</td>
           </tr>
           <tr>
             <th></th>
