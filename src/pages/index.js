@@ -14,31 +14,40 @@ import style from '../styles/index.css'
 
 const IndexPage = ({ data }) => {
   const properties = data.allContentfulProperty.edges
-  const propertiesNew = properties.filter((property) => property.node.category === '新築')
-  const propertiesRenov = properties.filter((property) => property.node.category === 'リノベ')
+  const propertiesNew = properties.filter(
+    property => property.node.category === '新築'
+  )
+  const propertiesRenov = properties.filter(
+    property => property.node.category === 'リノベ'
+  )
   const projects = data.allContentfulPropertyInProgress.edges
   const slides = data.allContentfulAsset.edges
 
   return (
     <Layout>
-      <SEO title="トップページ"/>
+      <SEO title="トップページ" />
 
       <ContactBanner />
 
       <div className="home">
         <div className="top-image-slider">
-          <Swiper options={{
-            autoplay: {
-              delay: 5000,
-            },
-            speed: 1000,
-            loop: true,
-          }}>
-            {
-              slides.map((s, i) => (
-                <img className="swiper-slide" src={s.node.file.url} alt={`slide-${i}`} key={s.node.id} />
-              ))
-            }
+          <Swiper
+            options={{
+              autoplay: {
+                delay: 2000,
+              },
+              speed: 1000,
+              loop: true,
+            }}
+          >
+            {slides.map((s, i) => (
+              <img
+                className="swiper-slide"
+                src={s.node.file.url}
+                alt={`slide-${i}`}
+                key={s.node.id}
+              />
+            ))}
           </Swiper>
 
           <div className="top-image-inner">
@@ -62,10 +71,7 @@ const IndexPage = ({ data }) => {
 
         <section className="new-properties-section list-section">
           <div className="works-container">
-            <Heading
-              enText="NEW WORKS"
-              jaText="新築事例"
-            />
+            <Heading enText="NEW WORKS" jaText="新築事例" />
             <Properties properties={propertiesNew} />
           </div>
 
@@ -78,20 +84,14 @@ const IndexPage = ({ data }) => {
 
         <section className="renovated-properties-section list-section">
           <div className="works-container">
-            <Heading
-              enText="RENOVATION WORKS"
-              jaText="リノベーション事例"
-            />
+            <Heading enText="RENOVATION WORKS" jaText="リノベーション事例" />
             <Properties properties={propertiesRenov} />
           </div>
         </section>
 
         <section className="projects-section list-section">
           <div className="projects-container">
-            <Heading
-              enText="PROJECTS"
-              jaText="進行中の家"
-            />
+            <Heading enText="PROJECTS" jaText="進行中の家" />
             <Projects projects={projects} />
           </div>
         </section>
@@ -112,7 +112,7 @@ export default IndexPage
 
 export const query = graphql`
   query IndexPageQuery {
-    allContentfulProperty(sort: {fields: case}) {
+    allContentfulProperty(sort: { fields: case }) {
       edges {
         node {
           id
@@ -130,7 +130,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulPropertyInProgress(sort: {fields: order}) {
+    allContentfulPropertyInProgress(sort: { fields: order }) {
       edges {
         node {
           id
@@ -149,7 +149,10 @@ export const query = graphql`
         }
       }
     }
-    allContentfulAsset(filter: {title: {regex: "/^top-slide-/"}}, sort: {fields: title}) {
+    allContentfulAsset(
+      filter: { title: { regex: "/^top-slide-/" } }
+      sort: { fields: title }
+    ) {
       edges {
         node {
           id
