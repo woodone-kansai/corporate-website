@@ -25,8 +25,8 @@ module.exports = {
         name: `Woodone Kansai`,
         short_name: `woodonekansai`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/woodonekansai-icon.png`,
       },
@@ -36,13 +36,13 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      }
+      },
     },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-styled-jsx`,
       options: {
-        jsxPlugins: ["styled-jsx-plugin-sass"],
+        jsxPlugins: ['styled-jsx-plugin-sass'],
       },
     },
     {
