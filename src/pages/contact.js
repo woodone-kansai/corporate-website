@@ -26,10 +26,7 @@ const ContactPage = () => {
     <Layout>
       <SEO title="お問合せフォーム" description={metaDescription} />
       <div className="contact">
-        <Heading
-          enText="Contact"
-          jaText="お問合せフォーム"
-        />
+        <Heading enText="Contact" jaText="お問合せフォーム" />
 
         <form
           name="contact"
@@ -37,8 +34,14 @@ const ContactPage = () => {
           action="/contact"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          onSubmit={() => alert('お問い合わせいただきありがとうございました。\n内容を確認した後、担当者より連絡いたします。')}
+          onSubmit={() =>
+            alert(
+              'お問い合わせいただきありがとうございました。\n内容を確認した後、担当者より連絡いたします。'
+            )
+          }
         >
+          <input type="hidden" name="form-name" value="contact" />
+
           <p className="form-item hidden">
             <label>
               Don’t fill this out if you're human:
@@ -72,7 +75,11 @@ const ContactPage = () => {
           <p className="form-item">
             <label>
               <span className="label-text">建築予定エリア</span>
-              <input name="建築予定エリア" type="text" placeholder="例：兵庫県宝塚市"/>
+              <input
+                name="建築予定エリア"
+                type="text"
+                placeholder="例：兵庫県宝塚市"
+              />
             </label>
           </p>
 
@@ -92,17 +99,25 @@ const ContactPage = () => {
           <p className="form-item">
             <label>
               <span className="label-text">建築予算</span>
-              <input type="text" name="建築予算" placeholder="例：〇〇万円くらい"/>
+              <input
+                type="text"
+                name="建築予算"
+                placeholder="例：〇〇万円くらい"
+              />
             </label>
           </p>
 
           <p className="form-item">
             <label>
-              <span className="label-text">お問合内容</span>
+              <span className="label-text">お問い合わせ内容</span>
               <select name="お問い合わせ内容">
                 <option value="カタログ請求">カタログ請求</option>
-                <option value="間取りや費用について相談したい">間取りや費用について相談したい</option>
-                <option value="直接会って相談したい">直接会って相談したい</option>
+                <option value="間取りや費用について相談したい">
+                  間取りや費用について相談したい
+                </option>
+                <option value="直接会って相談したい">
+                  直接会って相談したい
+                </option>
               </select>
             </label>
           </p>
@@ -110,58 +125,64 @@ const ContactPage = () => {
           <p className="form-item">
             <label>
               <span className="label-text">ご質問等</span>
-              <textarea name="ご質問等" placeholder="ご質問等があればご記載ください。"></textarea>
+              <textarea
+                name="ご質問等"
+                placeholder="ご質問等があればご記載ください。"
+              ></textarea>
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text required">お名前</span>
-              <input required type="text" name="お名前"/>
+              <input required type="text" name="お名前" />
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text required">フリガナ</span>
-              <input required type="text" name="フリガナ"/>
+              <input required type="text" name="フリガナ" />
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text required">メールアドレス</span>
-              <input required type="email" name="メールアドレス"/>
+              <input required type="email" name="メールアドレス" />
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text required">ご住所</span>
-              <input required type="text" name="ご住所"/>
+              <input required type="text" name="ご住所" />
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text required">電話番号</span>
-              <input required type="tel" name="電話番号"/>
+              <input required type="tel" name="電話番号" />
             </label>
           </p>
 
           <p className="form-item">
             <label>
               <span className="label-text">電話連絡可能時間帯</span>
-              <textarea name="電話連絡可能時間帯" placeholder="ご都合のよい時間帯をご記入ください。"/>
+              <textarea
+                name="電話連絡可能時間帯"
+                placeholder="ご都合のよい時間帯をご記入ください。"
+              />
             </label>
           </p>
 
-          <button className="submit-button" type="submit">送信</button>
+          <button className="submit-button" type="submit">
+            送信
+          </button>
         </form>
       </div>
-      <style jsx>
-        {style}
-      </style>
+      <style jsx>{style}</style>
     </Layout>
   )
 }
