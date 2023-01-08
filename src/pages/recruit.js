@@ -29,20 +29,15 @@ const RecruitPage = () => {
       <ContactBanner />
 
       <div className="recruit">
-        <Heading
-          enText="RECRUIT"
-          jaText="求人情報"
-        />
+        <Heading enText="RECRUIT" jaText="求人情報" />
 
-        <p className="description">
-          募集要項
-        </p>
+        <p className="description">募集要項</p>
 
         <table>
           <tbody>
             <tr>
               <th>勤務時間</th>
-              <td>9：00～18：00</td>
+              <td colSpan="2">9：00～18：00</td>
               <td></td>
             </tr>
             <tr>
@@ -53,7 +48,9 @@ const RecruitPage = () => {
             <tr>
               <th></th>
               <td>
-                ※設計<br />(コーディネーター含)
+                ※設計
+                <br />
+                (コーディネーター含)
               </td>
               <td>火曜・水曜</td>
             </tr>
@@ -69,11 +66,15 @@ const RecruitPage = () => {
             </tr>
             <tr>
               <th></th>
-              <td colSpan="2">年末年始休暇・夏季休暇・有給休暇（初年度10日※入社月により若干変動有）</td>
+              <td colSpan="2">
+                年末年始休暇・夏季休暇・有給休暇（初年度10日※入社月により若干変動有）
+              </td>
             </tr>
             <tr>
               <th></th>
-              <td colSpan="2">慶弔休暇、特別休暇（生理・出産・公傷・交通遮断）等</td>
+              <td colSpan="2">
+                慶弔休暇、特別休暇（生理・出産・公傷・交通遮断）等
+              </td>
             </tr>
             <tr>
               <th>福利厚生</th>
@@ -87,12 +88,23 @@ const RecruitPage = () => {
               <th></th>
               <td colSpan="2">info.woodonekansai@gmail.com</td>
             </tr>
+            <tr>
+              <th></th>
+              <td colSpan="2">
+                詳しい採用情報は
+                <a
+                  href="https://woodonekansai.jbplt.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  こちら
+                </a>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
-      <style jsx>
-        {style}
-      </style>
+      <style jsx>{style}</style>
     </Layout>
   )
 }
