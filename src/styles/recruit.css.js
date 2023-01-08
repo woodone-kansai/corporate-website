@@ -18,7 +18,7 @@ export default css`
         padding: 0 10px;
       }
     }
-  
+
     table {
       width: 100%;
       max-width: 700px;
@@ -28,6 +28,7 @@ export default css`
       tr {
         th {
           width: 16%;
+          white-space: nowrap;
           @media (max-width: 768px) {
             font-size: 10px;
           }
@@ -38,9 +39,10 @@ export default css`
             font-size: 13px;
           }
         }
-        th, td {
+        th,
+        td {
           text-align: left;
-          padding: 10px 8px;;
+          padding: 10px 8px;
         }
       }
     }
