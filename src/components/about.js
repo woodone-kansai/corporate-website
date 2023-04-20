@@ -1,7 +1,7 @@
-import React from "react"
-import Heading from "../components/heading"
+import React from 'react'
+import Heading from '../components/heading'
 
-import style from "../styles/about.css"
+import style from '../styles/about.css'
 
 const AboutPage = () => (
   <>
@@ -93,6 +93,10 @@ const AboutPage = () => (
           <tr>
             <th></th>
             <td>ジャパンホームシールド株式会社</td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>JAS構造材活用拡大事業者登録</td>
           </tr>
         </tbody>
       </table>
