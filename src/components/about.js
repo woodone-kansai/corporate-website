@@ -56,11 +56,11 @@ const AboutPage = () => (
           </tr>
           <tr>
             <th>保有資格</th>
-            <td>一級建築士2名</td>
+            <td>一級建築士1名</td>
           </tr>
           <tr>
             <th></th>
-            <td>二級建築士4名</td>
+            <td>二級建築士5名</td>
           </tr>
           <tr>
             <th></th>
